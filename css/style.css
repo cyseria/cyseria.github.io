@@ -3341,3 +3341,146 @@ footer .footer_bottom {
 .footer-link a{
 	color: #fff;
 }
+
+
+
+.menu {
+	display: none;
+	min-width: 800px;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	z-index: 3;
+}
+
+.menu header {
+	text-align: center;
+	padding-top: 3.5%;
+	padding-bottom: 10px;
+	line-height: 52px;
+}
+.menu header h1 {
+	font-size: 36px;
+	color: #000
+}
+.menu header h1 span {
+	color: #f0ed80;
+	font-size: 60px;
+	font-weight: lighter;
+	margin: 10px;
+}
+.menu header h2 {
+	color: #282828;
+	font-size: 26px;
+	font-weight: lighter;
+}
+
+.menu .welcome {
+	width: 270px;
+	height: 100px;
+	position: absolute;
+	right: -110px;
+	bottom: -26px;
+	border-top: 1px solid #aaa;
+	font-size: 30px;
+	text-align: center;
+	line-height: 35px;
+	padding: 35px;
+	/* padding-bottom: 31px; */
+	transform: rotate(-45deg);
+}
+
+.life h1, .life h2 ,
+.note h1, .note h2 ,
+.design h1, .design h2 {
+	font-size: 15px;
+	font-weight: normal;
+}
+.about {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+}
+.about:hover {
+	text-decoration: underline;
+}
+.life, .design ,.note {
+	position: absolute;
+	padding: 10px;
+}
+.life:hover, .design:hover ,.note:hover {
+	border: 1px solid #000;
+}
+.life {
+	margin-left: 11%;
+}
+.design {
+	margin-left: 45%;
+	margin-top: 23%;
+}
+.note {
+	margin-left: 81%;
+	margin-top: 3%;
+}
+
+
+.menu-btn ,.menu-btn-click{
+	height: 45px;
+	float: left;
+	margin-left: 22px;
+	margin-top: 10px;
+	z-index: 9;
+	position: relative;
+	cursor: pointer;
+}
+
+.menu-btn-click span{
+	width: 30px;
+	height: 3px;
+	display: block;
+	margin-top: 7px;
+	z-index: 3;
+	position: relative;
+	transition: 0.8s;
+}
+.menu-btn span {
+	background-color: #e78170;
+	width: 30px;
+	height: 2px;
+	display: block;
+	margin-top: 7px;
+	z-index: 3;
+	position: relative;
+	transition: 0.8s;
+}
+
+.menu-btn span:nth-child(1) {
+	background-color: #e78170;
+	top: 0;
+	transform: rotate(0);
+}
+.menu-btn span:nth-child(2) {
+	background-color: #e78170;
+	z-index: 3;
+}
+.menu-btn span:last-child {
+	background-color: #e78170;
+	transform: rotate(0);
+}
+.menu-btn-click span:nth-child(1) {
+	background-color: #e78170;
+	transform: rotate(45deg);
+	top: 20px;
+}
+.menu-btn-click span:nth-child(2) {
+	background: #fff;
+	z-index: 1;
+}
+.menu-btn-click span:last-child {
+	background-color: #e78170;
+	transform: rotate(-45deg);
+}
+

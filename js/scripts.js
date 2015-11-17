@@ -175,15 +175,8 @@ $(document).ready(function($) {
 
 // Enable dropdown sub-menus in off-canvas navigation
 $(document).ready(function($) {
-	$('.sb-toggle-submenu').off('click') // Stop submenu toggle from closing Slidebars.
-		.on('click', function() {
-			$submenu = $(this).parent().children('.sb-submenu');
-			$(this).add($submenu).toggleClass('sb-submenu-active'); // Toggle active class.
-
-			if ($submenu.hasClass('sb-submenu-active')) {
-			$submenu.slideDown(200);
-			} else {
-			$submenu.slideUp(200);
-		}
+	$(".menu-btn").click(function() {
+		$(".menu").fadeToggle();
+		$(".menu-btn").toggleClass('menu-btn-click');
 	});
 });
