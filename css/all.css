@@ -675,8 +675,7 @@ nav i.icon-basic-eye {
 	-ms-transition: background-color 400ms linear;
 	transition: background-color 400ms linear;
 	z-index:10;
-	border:none;
-	border-bottom: none;
+	border-bottom: 1px solid #ccc;
 }
 #blog-post .navbar-inner {
 	background-color: #fff;
@@ -760,7 +759,7 @@ nav i.icon-basic-eye {
 }
 button.menu-icon {
 	position: fixed;
-	right: 30px;
+	left: 30px;
 	top: 21px;
 	margin-top: 0;
 	z-index: 2050;
@@ -806,7 +805,7 @@ button.navbar-toggle .icon-bar {
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
 	border-radius: 0;
-	background-color: #151515;
+	background-color:  #e78170;
 	-webkit-transition: all ease 0.2s;
 	-moz-transition: all ease .2s;
 	-o-transition: all ease .2s;
@@ -3444,6 +3443,15 @@ footer .footer_bottom {
 .icon-sina-weibo:before { content: "\e666"; }
 .icon-github:before { content: "\e636"; }
 /*---------------- END ------------------------*/
+.footer-link {
+	float: left;
+}
+.footer-link li {
+	list-style: none;
+}
+.footer-link a{
+	color: #fff;
+}
 @charset "utf-8";
 /* CSS Document */
 
