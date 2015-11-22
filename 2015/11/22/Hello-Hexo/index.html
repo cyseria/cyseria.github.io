@@ -8,7 +8,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives | Cyseria | blog</title>
+  <title>Hello Hexo | Cyseria | blog</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -75,7 +75,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -173,46 +173,112 @@
 
         <!-- ============================ END Hero Image =========================== -->
       
-
-
-<section id="services">
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2015/11/22/Hello-Hexo/">Hello Hexo</a></h4>
-                            
-                            <p><time datetime="2015-11-22T13:43:51.000Z"><a href="/2015/11/22/Hello-Hexo/">2015-11-22</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2015/11/20/hello-world/">hello world</a></h4>
-                            
-                            <p><time datetime="2015-11-20T05:11:16.000Z"><a href="/2015/11/20/hello-world/">2015-11-20</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2015-11-22T13:43:51.000Z" itemprop="datePublished">
+          2015-11-22
+      </time>
+    
+    
+    | 
+    <a href='/tags/教程/'>教程</a>
+    
+    
+</span>
+                <h1>Hello Hexo</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<blockquote>
+<p>从QQ空间到网易博客到买主机搭wp写主题再到用github pages和hexo改主题，期间文字也从各种矫情到技术记录，丢了不少。这里也一样全新的开始，记录关于前端，关于IT的点点滴滴。之后会怎样，谁知道呢（摊手）。</p>
+</blockquote>
+<h4 id="环境搭建">环境搭建</h4><ol>
+<li><p>git安装<br>这里我推荐<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">廖雪峰</a>的gitj教程。</p>
+</li>
+<li><p>node.js安装<br>去<a href="https://nodejs.org/en/" target="_blank" rel="external">官网</a>下载，跟普通装软件下一步下一步就好这里就不多说。安装完成后可用在<code>node -v</code>在cmd下查看node的版本。</p>
+</li>
+<li><p>nmp(node包管理器)<br>由于新版的nodejs已经集成了npm，所以之前npm也一并安装好了。同样可以使用cmd命令行输入<code>npm -v</code>来测试是否成功安装。</p>
+</li>
+<li><p>Hexo安装<br>通过npm安装Hexo</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> hexo -<span class="keyword">g</span></span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>如安装失败可以尝试把官方源替换为<a href="https://npm.taobao.org/" target="_blank" rel="external">淘宝npm源</a> 再执行安装Hexo</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> -<span class="keyword">g</span> cnpm <span class="comment">--registry=https://registry.npm.taobao.org</span></span></span><br></pre></td></tr></table></figure>
+<h4 id="hexo配置">hexo配置</h4><ol>
+<li><p>新建一个需要当做博客目录的文件夹</p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> blog</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在此文件夹中右键打开Git Bash</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">hexo</span> init</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Hexo随后会自动在目标文件夹建立网站所需要的文件。然后按照提示，运行 npm install（在 blog文件夹下） </p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动服务</p>
+<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">server</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>当看到<code>[info] Hexo is running at ...</code>表明Hexo Server已经启动了，在浏览器中打开 <a href="http://localhost:4000/，这时可以看到Hexo已为你生成了一篇blog。" target="_blank" rel="external">http://localhost:4000/，这时可以看到Hexo已为你生成了一篇blog。</a><br>你可以按Ctrl+C 停止Server。</p>
+<h4 id="github配置">github配置</h4><ul>
+<li>首先github一定要配置ssh，可自行百度也可以看<a href="https://help.github.com/articles/generating-ssh-keys/" target="_blank" rel="external">github的官方文档</a></li>
+<li>新建github项目，名称为cyseria.github.io<br>(这里的cyseria替换成你想要的名称)</li>
+<li>部署到Github前需要配置_config.yml文件，首先找到下面的内容<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># Deployment</span></span><br><span class="line"><span class="preprocessor">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="title">deploy</span>:</span><br><span class="line">  <span class="typedef"><span class="keyword">type</span>:</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>然后将它们修改为<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="operator">type</span>: git</span><br><span class="line">  repository: git@github.com:cyseria/cyseria.github.io.git</span><br><span class="line">  branch: <span class="literal">master</span></span><br></pre></td></tr></table></figure></p>
+<p>repository为你的github仓库的ssh地址</p>
+<h4 id="文章书写">文章书写</h4><p>1 在blog文件夹下，执行下面的命令<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo <span class="keyword">new</span> <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure></p>
+<p>成功后会在\blog\source_posts目录下生成My-New-Post.md的文件，你可以使用任意支持markdown语法的编辑器来编写文章</p>
+<ol>
+<li>生成静态文章<br>执行下面的命令，将markdown文件生成静态网页。</li>
+</ol>
+<p>$ hexo generate<br>该命令执行完后，会在 D:\Hexo\public\ 目录下生成一系列html，css等文件。</p>
+<ol>
+<li>推送到github<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">hexo</span> deploy</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>然后你就可以在你对应的github page上看到新写的文章了。</p>
+<ul>
+<li>总结<br>每次部署基本就这几个指令<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">hexo</span> clean <span class="comment">#清除缓存 网页正常情况下可以忽略此条命令</span></span><br><span class="line">hexo g <span class="comment">#生成静态网页</span></span><br><span class="line">hexo d <span class="comment">#开始部署</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>最后提醒一个坑，注意空格，毕竟hexo要求有点严格</p>
+<h4 id="主题">主题</h4><p>知乎在这里总结得挺好了：<a href="http://www.zhihu.com/question/24422335" target="_blank" rel="external">http://www.zhihu.com/question/24422335</a><br>还有github上找到的：<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">https://github.com/hexojs/hexo/wiki/Themes</a></p>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2015/11/20/hello-world/">
+        hello world →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2015/11/22/Hello-Hexo/" data-title="Hello Hexo" data-url="http://yoursite.com/2015/11/22/Hello-Hexo/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"cyseria"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
