@@ -3335,6 +3335,9 @@ footer .footer_bottom {
 .footer-link {
 	float: left;
 }
+.footer-link ul {
+	padding-left: 0;
+}
 .footer-link li {
 	list-style: none;
 }
