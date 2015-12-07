@@ -3334,6 +3334,7 @@ footer .footer_bottom {
 /*---------------- END ------------------------*/
 .footer-link {
 	float: left;
+	margin-left: 10%;
 }
 .footer-link ul {
 	padding-left: 0;
