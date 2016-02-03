@@ -212,6 +212,8 @@ odepen.io/sdras" target="_blank" rel="external">@sdras</a>) on <a href="http://c
 <p>但是我们想想当你优化的时候，你发现你想改变动画的第二个属性值，这会影响接下来的它之后的所有元素，所以当我们调整之后。好像没什么大问题：<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">animation:</span> foo <span class="number">2.5</span>s ease-<span class="keyword">in</span>-<span class="keyword">out</span>, bar <span class="number">4</span>s <span class="number">2.5</span>s ease-<span class="keyword">in</span>-<span class="keyword">out</span>, brainz <span class="number">6</span>s <span class="number">6.5</span>s ease-<span class="keyword">in</span>-<span class="keyword">out</span><span class="comment">;</span></span><br></pre></td></tr></table></figure></p>
 <p>现在让我们添加另一个动画也要再次进行调整（好的动画产生之前这种微调似乎是必然的），于是事情的效率好像就有点低了。当你这么做了3次，真的就非常低效率。<br>接着你可以想象一下如果你有两个动画并且要让他们保持一致…嗯你理解就好。这就是为什么每当当链式动画效果超越三个或四个，我就会使用JavaScript了。就个人而言，我比较喜欢<a href="https://greensock.com/" target="_blank" rel="external">GreenSock animation API</a>因为它有非常强健的时间轴功能，但是很多JS允许你在不重新计算的情况下使用简单的堆栈动画创造工作流。</p>
 <h2 id="∞">∞</h2><p>制作一个动画不仅仅是构建起来。通常情况下，它是人们通过编辑精炼和调试从而让一个项目从一个只是精心策划过的的运动变成一个有更好的性能的动画。希望这些建议能够成为你工具箱的工具，使你工作起来更加顺畅。</p>
+<hr>
+<p>本文根据<a href="https://css-tricks.com/author/sdrasner/" target="_blank" rel="external">@SARAH DRASNER</a>的文章所译，整篇译文带有自己的理解和意思，如果有译得不好的地方或者不对之处，还请大家指点。英文出处：<a href="https://css-tricks.com/debugging-css-keyframe-animations/" target="_blank" rel="external">Debugging CSS Keyframe Animations</a></p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
