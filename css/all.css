@@ -3506,35 +3506,27 @@ footer .footer_bottom {
 	transform: rotate(-45deg);
 }
 
-.life h1, .life h2 ,
-.note h1, .note h2 ,
-.design h1, .design h2 {
-	font-size: 15px;
-	font-weight: normal;
-}
-.about {
-	position: absolute;
-	top: 10px;
-	right: 20px;
-}
-.about:hover {
-	text-decoration: underline;
-}
-.life, .design ,.note {
+
+
+.menu-item {
 	position: absolute;
 	padding: 10px;
 }
-.life:hover, .design:hover ,.note:hover {
+.menu-item:hover {
 	border: 1px solid #000;
 }
-.life {
+.menu-item h1, .menu-item h2 {
+	font-size: 15px;
+	font-weight: normal;
+}
+.code {
 	margin-left: 11%;
 }
-.design {
+.show {
 	margin-left: 45%;
 	margin-top: 23%;
 }
-.note {
+.design {
 	margin-left: 81%;
 	margin-top: 3%;
 }
@@ -3597,7 +3589,46 @@ footer .footer_bottom {
 	transform: rotate(-45deg);
 }
 
-
+.archive-item:before {
+	content: " ";
+	position: absolute;
+	left: 0;
+	top: 24px;
+	width: 8px;
+	height: 8px;
+	margin-left: -4px;
+	background: #bbb;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+	transition-property: background;
+}
+.archive-item {
+	position: relative;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+	transition-property: border;
+	border-bottom: 1px dashed #ccc;
+	font-family: Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+.archive-item .title {
+ 	margin-left: 105px;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 54px;
+ }
+.archive-item time {
+	position: absolute;
+	font-size: 12px;
+	left: 20px;
+	top: 13px;
+}
+.archive-item time>a {
+	color: #666;
+}
 @charset "utf-8";
 /* CSS Document */
 
