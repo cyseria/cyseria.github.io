@@ -132,11 +132,7 @@ html[xmlns] .slides {display: block;}
 	width: 100%;
 	height: 2px;
 }
-/* Turn off wow page animations for phones and tablets, (touch-scroll devices essentially) */
-/* Why do this? Because on 99% of touch-enabled devices, any on-page actions aren't fired until
- * the browsers' scroll-engine has fully stopped on the screen, therefore you end up scrolling
- * to blank page content, until the user removes their finger from the screen and the browsers' engine can
- * then render the page content, leaving a buggy user-experience */
+
 @media (max-width: 1024px) {
 	.wow {
 		visibility: visible !important;
@@ -168,7 +164,6 @@ body {
 	padding: 0px 0px;
 }
 p {
-    font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 	color: #666;
 	font-style: normal;
 	font-weight: 400;
@@ -3457,8 +3452,11 @@ footer .footer_bottom {
 	color: #fff;
 }
 
-
-
+@media (min-width: 992px) {
+	.menu .header ｛
+		display: none;
+	｝
+}
 .menu {
 	display: none;
 	min-width: 800px;
