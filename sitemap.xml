@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://cyseria.xyz/404.html</loc>
+    <lastmod>2016-02-24T04:52:23.692Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://cyseria.xyz/2016/02/23/10-Top-Tips-for-Creating-Cute-Kawaii-Art/</loc>
     <lastmod>2016-02-23T15:49:56.986Z</lastmod>
   </url>
@@ -44,11 +49,6 @@
   <url>
     <loc>http://cyseria.xyz/design/index.html</loc>
     <lastmod>2016-02-22T09:06:05.221Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://cyseria.xyz/404.html</loc>
-    <lastmod>2016-02-22T08:25:00.229Z</lastmod>
   </url>
   
   <url>
