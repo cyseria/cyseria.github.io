@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://cyseria.xyz/show/index.html</loc>
+    <lastmod>2016-02-24T13:48:34.488Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://cyseria.xyz/404.html</loc>
     <lastmod>2016-02-24T05:07:17.028Z</lastmod>
   </url>
