@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://cyseria.xyz/test/index.html</loc>
+    <lastmod>2016-04-11T01:01:57.899Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://cyseria.xyz/2016/04/05/typeof-and-instanceof/</loc>
     <lastmod>2016-04-05T06:45:36.733Z</lastmod>
   </url>
