@@ -209,7 +209,7 @@ var _hmt = _hmt || [];
 <h2 id="其他">其他</h2><h3 id="不用临时变量交换两个数">不用临时变量交换两个数</h3><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// C语言</span></span><br><span class="line">void swap<span class="comment">(int *a,int *b)</span> &#123;     </span><br><span class="line">    <span class="comment">(*a)</span> ^= <span class="comment">(*b)</span> ^= <span class="comment">(*a)</span> ^= <span class="comment">(*b)</span>;     </span><br><span class="line">&#125;  </span><br><span class="line"><span class="comment">// 通用</span></span><br><span class="line">a ^= b;  </span><br><span class="line">b ^= a;  </span><br><span class="line">a ^= b;</span><br></pre></td></tr></table></figure>
 <p>另外一些可能没实质提升的写法：<br>计算n+1: <code>-~n</code><br>计算n-1: <code>~-n</code><br>取相反数:<code>~n + 1</code></p>
 <p>最后，位运算基本常用的也总结得差不多。虽然通常在实际程序中用得不是很多，而且如果大面积使用对后期的可维护性是大大的降低。不过呢，学好位运算，理解一定的计算机基础知识对于编程而言还是很重要的呐（例如0.1+0.2 != 0.3之类的问题不用问搜索引擎就知道为什么了），还有，用位运算还可以很好的装逼（嗯..不过感觉大多妹子没兴趣，摊手~ ＞▽＜）</p>
-<p>最后的最后，回到最开始说的判断，<code>return n%4 !== 0</code>是102ms，，<code>return !!(n&amp;3)</code>是97ms，<code>return (n&amp;3)&gt;0;</code>是92ms看到有80的提交，表示暂时还没想出其他更好的解法，如有看到欢迎交流~</p>
+<p>最后的最后，回到最开始说的判断，小伙伴测试得出的<code>return n%4 !== 0</code>是102ms，，<code>return !!(n&amp;3)</code>是97ms，<code>return (n&amp;3)&gt;0;</code>是92ms看到有80的提交，然后表示暂时还没想出其他更快的方法了(/ □ )，如有看到欢迎交流~</p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
