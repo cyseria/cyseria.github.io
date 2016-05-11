@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+
+
+<html lang="zh-cmn-Hans">
+<!--<![endif]-->
+
+<head>
+  <title>关于位运算 | Cyseria | blog</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Cyseria | blog">
+    <meta name="author" content="Cyseria">
+    <meta name="description" content="鳗鱼鱼的博客" />
+    <meta name="keywords" content="" />
+    
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+    <script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?79a8aa5d4d01d92682c49b2594b37631";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+	<div class="menu">
+		<header>
+			<h1>M<span>\</span>Q</h1>
+			<h2>A coder &amp;&amp; designer</h2>
+		</header>
+
+		<div class="code menu-item">
+			<a href="/categories/code">
+				<img src="/img/life.png" alt="">
+				<h1>编码</h1>
+				<h2>Code Note</h2>
+			</a>
+		</div>
+
+		<div class="show menu-item">
+			<a href="/show">
+				<img src="/img/design.png" alt="">
+				<h1>展出</h1>
+				<h2>Show Time</h2>
+			</a>
+		</div>
+		<div class="design menu-item">
+			<a href="/categories/design">
+				<img src="/img/note.png" alt="">
+				<h1>设计</h1>
+				<h2>Some Design</h2>
+			</a>
+		</div>
+	</div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+    <div class="menu-btn">
+    	<span></span>
+    	<span></span>
+    	<span></span>
+    </div>
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+        	
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Cyseria | blog</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/cyseria" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/u/1887935412" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+<!--                             <li><a href="/archives" class="animsition-link" title="archive">归档</a></li> -->
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore"><a href="/about" class="animsition-link" title="about">About&gt;&gt;</a></div>
+                
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <!-- ============================ Hero Image =========================== -->
+
+       
+
+        <!-- Height spacing helper -->
+        
+        <!-- // End height spacing helper -->
+
+        <!-- ============================ END Hero Image =========================== -->
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-05-11T07:17:05.000Z" itemprop="datePublished">
+          2016-05-11
+      </time>
+    
+    
+    | 
+    <a href='/tags/basic/'>basic</a>
+    
+    
+</span>
+                <h1>关于位运算</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>[toc]</p>
+<blockquote>
+<p>确认实习offer之后，整个人懒了很多，加上忙着学校各种乱七八糟的事情，真是好久没写文章了。今天在小伙伴带动下准备开始刷点leecode陶冶下情操，顺便注意了一下其中的效率问题顺手记录</p>
+</blockquote>
+<p>最开始的原题是一道智力题（leecode题号292，Nim Game），我做出的结果是<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> canWinNim = <span class="function"><span class="keyword">function</span><span class="params">(n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> n % <span class="number">4</span> !== <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>通过，运算104ms，无聊之下看了下排行，c的效率果然不是一般的高，问小伙伴js有没有更高效写法，获得位运算の必杀技，总结一下常见技巧先。</p>
+<p>以下是正题：</p>
+<h2 id="基本运算">基本运算</h2><h3 id="乘以2的次方">乘以2的次方</h3><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="keyword">n</span> &lt;&lt; <span class="keyword">m</span>;  <span class="comment">//计算n*(2^m)</span></span><br><span class="line"><span class="comment">// eg.</span></span><br><span class="line"><span class="keyword">return</span> <span class="keyword">n</span> &lt;&lt; 1;  <span class="comment">// n*2</span></span><br></pre></td></tr></table></figure>
+<h3 id="除以2的次方">除以2的次方</h3><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="keyword">n</span> &gt;&gt; <span class="keyword">m</span>;  <span class="comment">//计算n/(2^m)</span></span><br><span class="line"><span class="comment">// eg.</span></span><br><span class="line"><span class="keyword">return</span> <span class="keyword">n</span> &gt;&gt; 1;  <span class="comment">// n/2</span></span><br></pre></td></tr></table></figure>
+<h3 id="乘以2的m次方">乘以2的m次方</h3><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//计算n*(2^m)  </span></span><br><span class="line"><span class="keyword">return</span> <span class="keyword">n</span> &lt;&lt; <span class="keyword">m</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="除以2的m次方">除以2的m次方</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/<span class="regexp">/计算n/</span>(<span class="number">2</span>^m)  </span><br><span class="line">    <span class="keyword">return</span> n <span class="prompt">&gt;&gt; </span>m;</span><br></pre></td></tr></table></figure>
+<h3 id="计算2的n次方">计算2的n次方</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getFactorialofTwo</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;<span class="comment">//n &gt; 0  </span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">2</span> &lt;&lt; (n-<span class="number">1</span>);<span class="comment">//2的n次方  </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="判断">判断</h2><h3 id="判断一个数的奇偶性">判断一个数的奇偶性</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> (n &amp; <span class="number">1</span>) == <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="判断符号是否相同">判断符号是否相同</h3><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">isSameSign</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span>&#123; <span class="comment">//有0的情况例外  </span></span><br><span class="line">    <span class="keyword">return</span> (x ^ y) &gt;= <span class="number">0</span>; <span class="comment">// true 表示 x和y有相同的符号， false表示x，y有相反的符号。  </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="判断一个数是不是2的幂">判断一个数是不是2的幂</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">boolean <span class="title">isFactorialofTwo</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;  </span><br><span class="line">    <span class="keyword">return</span> n &gt; <span class="number">0</span> ? (n &amp; (n - <span class="number">1</span>)) == <span class="number">0</span> : <span class="literal">false</span>;  </span><br><span class="line">    <span class="comment">/*如果是2的幂，n一定是100... n-1就是1111.... </span><br><span class="line">       所以做与运算结果为0*/</span>  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="取值">取值</h2><h3 id="取绝对值（某些机器上，效率比n&gt;0_?_n:-n_高）">取绝对值（某些机器上，效率比n&gt;0  ?  n:-n 高）</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">abs</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;  </span><br><span class="line">	<span class="keyword">return</span> (n ^ (n &gt;&gt; <span class="number">31</span>)) - (n &gt;&gt; <span class="number">31</span>);  </span><br><span class="line">	<span class="comment">/* n&gt;&gt;31 取得n的符号，若n为正数，n&gt;&gt;31等于0，若n为负数，n&gt;&gt;31等于-1,若n为正数 n^0=0,数不变，若n为负数有n^-1 需要计算n和-1的补码，然后进行异或运算， 结果n变号并且为n的绝对值减1，再减去-1就是绝对值 */</span>  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="取两个数的最大值（某些机器上，效率比a&gt;b_?_a:b高）">取两个数的最大值（某些机器上，效率比a&gt;b ? a:b高）</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">通用版</span><br><span class="line">[cpp] <span class="function">view plain copy</span><br><span class="line"><span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;  </span><br><span class="line">    <span class="keyword">return</span> b &amp; ((a-b) &gt;&gt; <span class="number">31</span>) | a &amp; (~(a-b) &gt;&gt; <span class="number">31</span>);  </span><br><span class="line">    <span class="comment">/*如果a&gt;=b,(a-b)&gt;&gt;31为0，否则为-1*/</span>  </span><br><span class="line">&#125;  </span><br><span class="line">C语言版</span><br><span class="line">[cpp] <span class="function">view plain copy</span><br><span class="line"><span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;  </span><br><span class="line">    <span class="keyword">return</span> x ^ ((x ^ y) &amp; -(x &lt; y));  </span><br><span class="line">    <span class="comment">/*如果x&lt;y x&lt;y返回1，否则返回0， </span><br><span class="line">、 与0做与运算结果为0，与-1做与运算结果不变*/</span>  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="取两个数的最小值（某些机器上，效率比a&gt;b_?_b:a高）">取两个数的最小值（某些机器上，效率比a&gt;b ? b:a高）</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通用</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">min</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;  </span><br><span class="line">    <span class="keyword">return</span> a &amp; ((a-b) &gt;&gt; <span class="number">31</span>) | b &amp; (~(a-b) &gt;&gt; <span class="number">31</span>);  </span><br><span class="line">    <span class="comment">/*如果a&gt;=b,(a-b)&gt;&gt;31为0，否则为-1*/</span>  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="comment">// C语言</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">min</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;  </span><br><span class="line">    <span class="keyword">return</span> y ^ ((x ^ y) &amp; -(x &lt; y));  </span><br><span class="line">         <span class="comment">/*如果x&lt;y x&lt;y返回1，否则返回0， </span><br><span class="line">            与0做与运算结果为0，与-1做与运算结果不变*/</span>  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="对2的n次方取余">对2的n次方取余</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">quyu</span><span class="params">(<span class="keyword">int</span> m,<span class="keyword">int</span> n)</span></span>&#123;<span class="comment">//n为2的次方  </span></span><br><span class="line">    <span class="keyword">return</span> m &amp; (n - <span class="number">1</span>);  </span><br><span class="line">    <span class="comment">/*如果是2的幂，n一定是100... n-1就是1111.... </span><br><span class="line">     所以做与运算结果保留m在n范围的非0的位*/</span>  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="求两个整数的平均值">求两个整数的平均值</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getAverage</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> (x + y) &gt;&gt; <span class="number">1</span>;   </span><br><span class="line">｝  </span><br><span class="line">另一种写法</span><br><span class="line">[java] <span class="function">view plain copy</span><br><span class="line"><span class="keyword">int</span> <span class="title">getAverage</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> ((x ^ y) &gt;&gt; <span class="number">1</span>) + (x &amp; y);   </span><br><span class="line">     <span class="comment">/*(x^y) &gt;&gt; 1得到x，y其中一个为1的位并除以2， </span><br><span class="line">       x&amp;y得到x，y都为1的部分，加一起就是平均数了*/</span>  </span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="二进制位的操作">二进制位的操作</h2><ul>
+<li><p>从低位到高位,取n的第m位</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getBit</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span></span>&#123;  </span><br><span class="line">    <span class="keyword">return</span> (n &gt;&gt; (m-<span class="number">1</span>)) &amp; <span class="number">1</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>从低位到高位.将n的第m位置1</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">setBitToOne</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span></span>&#123;  </span><br><span class="line">    <span class="keyword">return</span> n | (<span class="number">1</span> &lt;&lt; (m-<span class="number">1</span>));  </span><br><span class="line">    <span class="comment">/*将1左移m-1位找到第m位，得到000...1...000 </span><br><span class="line">      n在和这个数做或运算*/</span>  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>从低位到高位,将n的第m位置0</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">setBitToZero</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span></span>&#123;  </span><br><span class="line">    <span class="keyword">return</span> n &amp; ~(<span class="number">1</span> &lt;&lt; (m-<span class="number">1</span>));  </span><br><span class="line">    <span class="comment">/* 将1左移m-1位找到第m位，取反后变成111...0...1111 </span><br><span class="line">       n再和这个数做与运算*/</span>  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="int相关">int相关</h3><ul>
+<li><p>获得int字节数</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getMaxInt</span><span class="params">()</span></span>&#123;  </span><br><span class="line">    <span class="keyword">return</span> ((<span class="keyword">unsigned</span> <span class="keyword">int</span>) - <span class="number">1</span>) &gt;&gt; <span class="number">1</span>;<span class="comment">//2147483647  </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获得int型最大值</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getMaxInt</span><span class="params">()</span></span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> (<span class="number">1</span> &lt;&lt; <span class="number">31</span>) - <span class="number">1</span>;<span class="comment">//2147483647， 由于优先级关系，括号不可省略  </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>另外一种写法：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getMaxInt</span><span class="params">()</span></span>&#123;<span class="comment">//有些编译器不适用  </span></span><br><span class="line">    <span class="keyword">return</span> (<span class="number">1</span> &lt;&lt; -<span class="number">1</span>) - <span class="number">1</span>;<span class="comment">//2147483647  </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>获得int型最小值<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getMinInt</span><span class="params">()</span></span>&#123;  </span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span> &lt;&lt; <span class="number">31</span>;<span class="comment">//-2147483648  </span></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>另外一种写法：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getMinInt</span><span class="params">()</span></span>&#123;<span class="comment">//有些编译器不适用  </span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span> &lt;&lt; -<span class="number">1</span>;<span class="comment">//-2147483648  </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="其他">其他</h2><h3 id="不用临时变量交换两个数">不用临时变量交换两个数</h3><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// C语言</span></span><br><span class="line">void swap<span class="comment">(int *a,int *b)</span> &#123;     </span><br><span class="line">    <span class="comment">(*a)</span> ^= <span class="comment">(*b)</span> ^= <span class="comment">(*a)</span> ^= <span class="comment">(*b)</span>;     </span><br><span class="line">&#125;  </span><br><span class="line"><span class="comment">// 通用</span></span><br><span class="line">a ^= b;  </span><br><span class="line">b ^= a;  </span><br><span class="line">a ^= b;</span><br></pre></td></tr></table></figure>
+<p>另外一些可能没实质提升的写法：<br>计算n+1: <code>-~n</code><br>计算n-1: <code>~-n</code><br>取相反数:<code>~n + 1</code></p>
+<p>最后，位运算基本常用的也总结得差不多。虽然通常在实际程序中用得不是很多，而且如果大面积使用对后期的可维护性是大大的降低。不过呢，学好位运算，理解一定的计算机基础知识对于编程而言还是很重要的呐（例如0.1+0.2 != 0.3之类的问题不用问搜索引擎就知道为什么了），还有，用位运算还可以很好的装逼（嗯..不过感觉大多妹子没兴趣，摊手~ ＞▽＜）</p>
+<p>最后的最后，回到最开始说的判断，<code>return n%4 !== 0</code>是102ms，，<code>return !!(n&amp;3)</code>是97ms，<code>return (n&amp;3)&gt;0;</code>是92ms看到有80的提交，表示暂时还没想出其他更好的解法，如有看到欢迎交流~</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/04/05/typeof-and-instanceof/">
+        关于typeof和instanceOf →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/05/11/bit-operation/" data-title="关于位运算" data-url="http://cyseria.xyz/2016/05/11/bit-operation/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"cyseria"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Cyseria. All Rights Reserved.
+                </p>
+            </div>
+            <div class="footer-link">
+                <p>友情链接</p>
+                
+                    <ul>
+                        
+                        <li><a href="http://collect.w3ctrain.com/">w3ctrain</a></li>
+                        
+                        <li><a href="http://www.helkyle.com/">Helkyle</a></li>
+                        
+                        <li><a href="http://www.jhdxr.com/">虾米</a></li>
+                        
+                        <li><a href="http://lastavenger.github.io/">谷月轩</a></li>
+                        
+                    </ul>
+                
+            </div> 
+           
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/cyseria" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    <li><a href="http://weibo.com/u/1887935412" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>

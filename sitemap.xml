@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://cyseria.xyz/2016/05/11/bit-operation/</loc>
+    <lastmod>2016-05-11T07:17:53.882Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://cyseria.xyz/test/index.html</loc>
     <lastmod>2016-04-11T01:01:57.899Z</lastmod>
   </url>
