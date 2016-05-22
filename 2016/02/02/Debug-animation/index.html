@@ -142,6 +142,7 @@ var _hmt = _hmt || [];
 
         <!-- ============================ END Hero Image =========================== -->
       
+
 <section id="intro">
     <div class="container">
         <div class="row col-md-offset-2">
@@ -162,7 +163,9 @@ var _hmt = _hmt || [];
                 <h1>如何调试CSS的关键帧(keyframe)动画</h1>
             </div>
         </div>
+
         <div class="col-md-8 col-md-offset-2">
+        	<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#如何调试css的关键帧keyframe动画"><span class="toc-number">1.</span> <span class="toc-text">如何调试CSS的关键帧(keyframe)动画</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用负值延迟"><span class="toc-number">1.1.</span> <span class="toc-text">使用负值延迟</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多个transform值"><span class="toc-number">1.2.</span> <span class="toc-text">多个transform值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#保持keyframe整洁"><span class="toc-number">1.3.</span> <span class="toc-text">保持keyframe整洁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dry-ing-out-animations"><span class="toc-number">1.4.</span> <span class="toc-text">DRY-ing Out Animations</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用循环来获得更好的性能"><span class="toc-number">1.5.</span> <span class="toc-text">使用循环来获得更好的性能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#调整多动画序列"><span class="toc-number">1.6.</span> <span class="toc-text">调整多动画序列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#"><span class="toc-number">1.7.</span> <span class="toc-text">∞</span></a></li></ol></li></ol>
       		<h1 id="&#x5982;&#x4F55;&#x8C03;&#x8BD5;css&#x7684;&#x5173;&#x952E;&#x5E27;keyframe&#x52A8;&#x753B;">&#x5982;&#x4F55;&#x8C03;&#x8BD5;CSS&#x7684;&#x5173;&#x952E;&#x5E27;(keyframe)&#x52A8;&#x753B;</h1><blockquote>
 <p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5B66;&#x4E60;&#x8BED;&#x6CD5;&#x6765;&#x521B;&#x5EFA;CSS&#x52A8;&#x753B;&#xFF0C;&#x4F46;&#x521B;&#x9020;&#x7F8E;&#x4E3D;&#x6D41;&#x7545;&#x7684;&#x52A8;&#x753B;&#x53EF;&#x80FD;&#x5C31;&#x8981;&#x5173;&#x6CE8;&#x66F4;&#x591A;&#x7EC6;&#x8282;&#x4E86;&#x3002;&#x5982;&#x4ECA;&#x52A8;&#x753B;&#x88AB;&#x9AD8;&#x5EA6;&#x5173;&#x6CE8;&#xFF0C;&#x56E0;&#x6B64;&#x6B63;&#x786E;&#x8C03;&#x6574;&#x4EE3;&#x7801;&#x52A8;&#x753B;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x4EE5;&#x53CA;&#x51FA;&#x9519;&#x65F6;&#x5404;&#x79CD;&#x8C03;&#x8BD5;&#x65B9;&#x6CD5;&#x7A81;&#x663E;&#x91CD;&#x8981;&#x3002;&#x5728;&#x81EA;&#x5DF1;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x540E;&#x6574;&#x7406;&#x4E00;&#x756A;&#x3002;</p>
 </blockquote>
