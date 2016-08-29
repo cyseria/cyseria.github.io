@@ -1,170 +1,301 @@
-<!DOCTYPE html>
-<!--[if lte IE 8 ]>
-<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<![endif]-->
+<!doctype html>
 
 
-<html lang="zh-cmn-Hans">
-<!--<![endif]-->
 
+  
+
+
+<html class="theme-next mist use-motion">
 <head>
-  <title>Hello Hexo | Cyseria | blog</title>
-  <!-- Meta data -->
-    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content="Cyseria | blog">
-    <meta name="author" content="Cyseria">
-    <meta name="description" content="鳗鱼鱼的博客" />
-    <meta name="keywords" content="" />
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
     
-    <!-- Favicon, (keep icon in root folder) -->
-    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
-    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
-	
-    <link rel="stylesheet" href="/highlightjs/monokai.css" type="text/css">
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
     
-
-    <!-- Custom stylesheet, (add custom styles here, always load last) -->
-    <!-- Load our stylesheet for IE8 -->
-    <!--[if IE 8]>
-    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
-    <![endif]-->
-    <script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
-
-    <!-- Load these in the <head> for quicker IE8+ load times -->
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="/js/html5shiv.min.js"></script>
-    <script src="/js/respond.min.js"></script>
-    <![endif]-->
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
 
 
-  <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?79a8aa5d4d01d92682c49b2594b37631";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="教程," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="&amp;#x4ECE;QQ&amp;#x7A7A;&amp;#x95F4;&amp;#x5230;&amp;#x7F51;&amp;#x6613;&amp;#x535A;&amp;#x5BA2;&amp;#x5230;&amp;#x4E70;&amp;#x4E3B;&amp;#x673A;&amp;#x642D; wp &amp;#x5199;&amp;#x4E3B;&amp;#x9898;&amp;#x518D;&amp;#x5230;&amp;#x7528; github pages &amp;#x548C; hexo &amp;#x6539;&amp;#x4E3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hello Hexo">
+<meta property="og:url" content="http://cyseria.xyz/2015/11/22/Hello-Hexo/index.html">
+<meta property="og:site_name" content="Cyseria | blog">
+<meta property="og:description" content="&amp;#x4ECE;QQ&amp;#x7A7A;&amp;#x95F4;&amp;#x5230;&amp;#x7F51;&amp;#x6613;&amp;#x535A;&amp;#x5BA2;&amp;#x5230;&amp;#x4E70;&amp;#x4E3B;&amp;#x673A;&amp;#x642D; wp &amp;#x5199;&amp;#x4E3B;&amp;#x9898;&amp;#x518D;&amp;#x5230;&amp;#x7528; github pages &amp;#x548C; hexo &amp;#x6539;&amp;#x4E3">
+<meta property="og:updated_time" content="2016-02-22T11:49:38.177Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hello Hexo">
+<meta name="twitter:description" content="&amp;#x4ECE;QQ&amp;#x7A7A;&amp;#x95F4;&amp;#x5230;&amp;#x7F51;&amp;#x6613;&amp;#x535A;&amp;#x5BA2;&amp;#x5230;&amp;#x4E70;&amp;#x4E3B;&amp;#x673A;&amp;#x642D; wp &amp;#x5199;&amp;#x4E3B;&amp;#x9898;&amp;#x518D;&amp;#x5230;&amp;#x7528; github pages &amp;#x548C; hexo &amp;#x6539;&amp;#x4E3">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
 </script>
 
+
+
+
+  <link rel="canonical" href="http://cyseria.xyz/2015/11/22/Hello-Hexo/"/>
+
+  <title> Hello Hexo | Cyseria | blog </title>
 </head>
 
-<!--
-<body class="post-template">
--->
-<body id="index" class="lightnav animsition">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-      <!-- ============================ Off-canvas navigation =========================== -->
-	<div class="menu">
-		<header>
-			<h1>M<span>\</span>Q</h1>
-			<h2>A coder &amp;&amp; designer</h2>
-		</header>
+  
 
-		<div class="code menu-item">
-			<a href="/categories/code">
-				<img src="/img/life.png" alt="">
-				<h1>编码</h1>
-				<h2>Code Note</h2>
-			</a>
-		</div>
 
-		<div class="show menu-item">
-			<a href="/show">
-				<img src="/img/design.png" alt="">
-				<h1>展出</h1>
-				<h2>Show Time</h2>
-			</a>
-		</div>
-		<div class="design menu-item">
-			<a href="/categories/design">
-				<img src="/img/note.png" alt="">
-				<h1>设计</h1>
-				<h2>Some Design</h2>
-			</a>
-		</div>
-	</div>
+
+
+
+
+
+
+
+
+  
+  
     
-    <!-- ============================ END Off-canvas navigation =========================== -->
+  
 
-    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
-    <div class="menu-btn">
-    	<span></span>
-    	<span></span>
-    	<span></span>
-    </div>
-    <div id="sb-site">
-        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
 
-        <!-- ============================ Header & Logo bar =========================== -->
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
 
-        <div id="navigation" class="navbar navbar-fixed-top">
-        	
-            <div class="navbar-inner">
-                <div class="container">
-                    <!-- Info-bar -->
-                    <nav>
-                        <ul class="nav">
-                            <li><a href="/" class="animsition-link">Cyseria | blog</a></li>
-                            <li class="nolink"><span>Always </span>Creative.</li>
-                            
-                            <li><a href="https://github.com/cyseria" title="Github" target="_blank"><i class="icon-github"></i></a></li>
-                            
-                            
-                            <li><a href="http://weibo.com/u/1887935412" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
-                            
-<!--                             <li><a href="/archives" class="animsition-link" title="archive">归档</a></li> -->
-                            <li class="nolink"><span>Welcome!</span></li>
-                        </ul>
-                    </nav>
-                    <!--// Info-bar -->
-                </div>
-                <!-- // .container -->
-                <div class="learnmore"><a href="/about" class="animsition-link" title="about">About&gt;&gt;</a></div>
-                
-            </div>
-            <!-- // .navbar-inner -->
-        </div>
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Cyseria | blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">鳗鱼鱼的博客</p>
+</div>
 
-        <!-- ============================ Header & Logo bar =========================== -->
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
 
-        <!-- ============================ Hero Image =========================== -->
+<nav class="site-nav">
+  
 
-       
-
-        <!-- Height spacing helper -->
+  
+    <ul id="menu" class="menu">
+      
         
-        <!-- // End height spacing helper -->
-
-        <!-- ============================ END Hero Image =========================== -->
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
       
 
-<section id="intro">
-    <div class="container">
-        <div class="row col-md-offset-2">
-            <div class="col-md-8">
-    			<span class="post-meta">
-      <time datetime="2015-11-22T13:43:51.000Z" itemprop="datePublished">
-          2015-11-22
-      </time>
-    
-    
-    | 
-    <a href='/tags/教程/'>教程</a>
-    
-    
-</span>
-                <h1>Hello Hexo</h1>
-            </div>
-        </div>
+      
+    </ul>
+  
 
-        <div class="col-md-8 col-md-offset-2">
-        	<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#环境搭建"><span class="toc-number">1.</span> <span class="toc-text">环境搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo配置"><span class="toc-number">2.</span> <span class="toc-text">hexo配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#github配置"><span class="toc-number">2.1.</span> <span class="toc-text">github配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文章书写"><span class="toc-number">3.</span> <span class="toc-text">文章书写</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主题"><span class="toc-number">4.</span> <span class="toc-text">主题</span></a></li></ol>
-      		<blockquote>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Hello Hexo
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-11-22T21:43:51+08:00" content="2015-11-22">
+              2015-11-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/code/" itemprop="url" rel="index">
+                    <span itemprop="name">code</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
 <p>&#x4ECE;QQ&#x7A7A;&#x95F4;&#x5230;&#x7F51;&#x6613;&#x535A;&#x5BA2;&#x5230;&#x4E70;&#x4E3B;&#x673A;&#x642D; wp &#x5199;&#x4E3B;&#x9898;&#x518D;&#x5230;&#x7528; github pages &#x548C; hexo &#x6539;&#x4E3B;&#x9898;&#xFF0C;&#x671F;&#x95F4;&#x6587;&#x5B57;&#x4E5F;&#x4ECE;&#x5404;&#x79CD;&#x77EB;&#x60C5;&#x5230;&#x6280;&#x672F;&#x8BB0;&#x5F55;&#xFF0C;&#x4E22;&#x4E86;&#x4E0D;&#x5C11;&#x3002;&#x8FD9;&#x91CC;&#x4E5F;&#x4E00;&#x6837;&#x5168;&#x65B0;&#x7684;&#x5F00;&#x59CB;&#xFF0C;&#x8BB0;&#x5F55;&#x5173;&#x4E8E;&#x524D;&#x7AEF;&#xFF0C;&#x5173;&#x4E8E;IT&#x7684;&#x70B9;&#x70B9;&#x6EF4;&#x6EF4;&#x3002;&#x4E4B;&#x540E;&#x4F1A;&#x600E;&#x6837;&#xFF0C;&#x8C01;&#x77E5;&#x9053;&#x5462;&#xFF08;&#x644A;&#x624B;&#xFF09;&#x3002;</p>
 </blockquote>
 <h3 id="&#x73AF;&#x5883;&#x642D;&#x5EFA;">&#x73AF;&#x5883;&#x642D;&#x5EFA;</h3><ol>
@@ -221,113 +352,305 @@ var _hmt = _hmt || [];
 <p>&#x6700;&#x540E;&#x63D0;&#x9192;&#x4E00;&#x4E2A;&#x5751;&#xFF0C;&#x6CE8;&#x610F;&#x7A7A;&#x683C;&#xFF0C;&#x6BD5;&#x7ADF;hexo&#x8981;&#x6C42;&#x6709;&#x70B9;&#x4E25;&#x683C;</p>
 <h3 id="&#x4E3B;&#x9898;">&#x4E3B;&#x9898;</h3><p>&#x77E5;&#x4E4E;&#x5728;&#x8FD9;&#x91CC;&#x603B;&#x7ED3;&#x5F97;&#x633A;&#x597D;&#x4E86;&#xFF1A;<a href="http://www.zhihu.com/question/24422335" target="_blank" rel="external">http://www.zhihu.com/question/24422335</a><br>&#x8FD8;&#x6709;github&#x4E0A;&#x627E;&#x5230;&#x7684;&#xFF1A;<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">https://github.com/hexojs/hexo/wiki/Themes</a></p>
 
-            <div class="clearfix"></div>
-            <hr class="nogutter">
-        </div>
-        <nav class="pagination" role="pagination">
-    
-    <a class="pull-left" href="/2015/12/07/about-center1/" style="float: left;">
-        ← 关于居中(一)
-    </a>
-    
-    
-</nav>
-
-        <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2015/11/22/Hello-Hexo/" data-title="Hello Hexo" data-url="http://cyseria.xyz/2015/11/22/Hello-Hexo/"></div>
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"cyseria"};
-(function() {
-	var ds = document.createElement('script');
-	ds.type = 'text/javascript';ds.async = true;
-	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-	ds.charset = 'UTF-8';
-	(document.getElementsByTagName('head')[0] 
-	 || document.getElementsByTagName('body')[0]).appendChild(ds);
-})();
-</script>
-</div>
+      
     </div>
-</section>
 
+    <div>
+      
+        
 
       
-<!-- ============================ Footer =========================== -->
+    </div>
 
-<footer>
-    <div class="container">
-            <div class="copy">
-                <p>
-                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Cyseria. All Rights Reserved.
-                </p>
-            </div>
-            <div class="footer-link">
-                <p>友情链接</p>
-                
-                    <ul>
-                        
-                        <li><a href="http://collect.w3ctrain.com/">w3ctrain</a></li>
-                        
-                        <li><a href="http://www.helkyle.com/">Helkyle</a></li>
-                        
-                        <li><a href="http://www.jhdxr.com/">虾米</a></li>
-                        
-                        <li><a href="http://lastavenger.github.io/">谷月轩</a></li>
-                        
-                    </ul>
-                
-            </div> 
-           
-            <div class="social">
-                <ul>
-                    
-                    <li><a href="https://github.com/cyseria" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
-                    
-                    
-                    
-                    <li><a href="http://weibo.com/u/1887935412" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
-                    
-                </ul>
-            </div>
-            <div class="clearfix"> </div>
-        </div>
-</footer>
-
-<!-- ============================ END Footer =========================== -->
-      <!-- Load our scripts -->
+    <div>
+      
         
-<!-- Resizable 'on-demand' full-height hero -->
-<script type="text/javascript">
-    
-    var resizeHero = function () {
-        var hero = $(".cover,.heightblock"),
-            window1 = $(window);
-        hero.css({
-            "height": window1.height()
-        });
-    };
-    
-    resizeHero();
-    
-    $(window).resize(function () {
-        resizeHero();
-    });
-</script>
-<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
-<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
-<script src="/js/scripts.js"></script><!-- Theme scripts -->
 
-<!-- Initiate flexslider plugin -->
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/教程/" rel="tag">#教程</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/12/07/about-center1/" rel="prev" title="关于居中(一)">
+                关于居中(一) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Cyseria" />
+          <p class="site-author-name" itemprop="name">Cyseria</p>
+          <p class="site-description motion-element" itemprop="description">这里是自己折腾的各种东西，包括前端技术文章，个人设计作品，欢迎吐槽</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/cyseria" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/1887935412/home?wvr=5" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#环境搭建"><span class="nav-number">1.</span> <span class="nav-text">环境搭建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo配置"><span class="nav-number">2.</span> <span class="nav-text">hexo配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#github配置"><span class="nav-number">2.1.</span> <span class="nav-text">github配置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文章书写"><span class="nav-number">3.</span> <span class="nav-text">文章书写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主题"><span class="nav-number">4.</span> <span class="nav-text">主题</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Cyseria</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
 <script type="text/javascript">
-    $(document).ready(function($) {
-      $('.flexslider').flexslider({
-        animation: "fade",
-        prevText: "",
-        nextText: "",
-        directionNav: true
-      });
-    });
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
 
 </body>
 </html>

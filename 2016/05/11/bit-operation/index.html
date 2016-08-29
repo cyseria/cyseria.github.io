@@ -1,174 +1,312 @@
-<!DOCTYPE html>
-<!--[if lte IE 8 ]>
-<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<![endif]-->
+<!doctype html>
 
 
-<html lang="zh-cmn-Hans">
-<!--<![endif]-->
 
+  
+
+
+<html class="theme-next mist use-motion">
 <head>
-  <title>关于位运算 | Cyseria | blog</title>
-  <!-- Meta data -->
-    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content="Cyseria | blog">
-    <meta name="author" content="Cyseria">
-    <meta name="description" content="鳗鱼鱼的博客" />
-    <meta name="keywords" content="" />
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
     
-    <!-- Favicon, (keep icon in root folder) -->
-    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
-    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
-	
-    <link rel="stylesheet" href="/highlightjs/monokai.css" type="text/css">
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
     
-
-    <!-- Custom stylesheet, (add custom styles here, always load last) -->
-    <!-- Load our stylesheet for IE8 -->
-    <!--[if IE 8]>
-    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
-    <![endif]-->
-    <script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
-
-    <!-- Load these in the <head> for quicker IE8+ load times -->
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="/js/html5shiv.min.js"></script>
-    <script src="/js/respond.min.js"></script>
-    <![endif]-->
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
 
 
-  <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?79a8aa5d4d01d92682c49b2594b37631";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="basic," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="确认实习offer之后，整个人懒了很多，加上忙着学校各种乱七八糟的事情，真是好久没写文章了。今天在小伙伴带动下准备开始刷点leecode陶冶下情操，顺便注意了一下其中的效率问题顺手记录
+
+最开始的原题是一道智力题（leecode题号292，Nim Game），我做出的结果是123var canWinNim = function(n) &amp;#123;    return n % 4 !== 0;&amp;#1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于位运算">
+<meta property="og:url" content="http://cyseria.xyz/2016/05/11/bit-operation/index.html">
+<meta property="og:site_name" content="Cyseria | blog">
+<meta property="og:description" content="确认实习offer之后，整个人懒了很多，加上忙着学校各种乱七八糟的事情，真是好久没写文章了。今天在小伙伴带动下准备开始刷点leecode陶冶下情操，顺便注意了一下其中的效率问题顺手记录
+
+最开始的原题是一道智力题（leecode题号292，Nim Game），我做出的结果是123var canWinNim = function(n) &amp;#123;    return n % 4 !== 0;&amp;#1">
+<meta property="og:updated_time" content="2016-08-29T17:19:50.511Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于位运算">
+<meta name="twitter:description" content="确认实习offer之后，整个人懒了很多，加上忙着学校各种乱七八糟的事情，真是好久没写文章了。今天在小伙伴带动下准备开始刷点leecode陶冶下情操，顺便注意了一下其中的效率问题顺手记录
+
+最开始的原题是一道智力题（leecode题号292，Nim Game），我做出的结果是123var canWinNim = function(n) &amp;#123;    return n % 4 !== 0;&amp;#1">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
 </script>
 
+
+
+
+  <link rel="canonical" href="http://cyseria.xyz/2016/05/11/bit-operation/"/>
+
+  <title> 关于位运算 | Cyseria | blog </title>
 </head>
 
-<!--
-<body class="post-template">
--->
-<body id="index" class="lightnav animsition">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-      <!-- ============================ Off-canvas navigation =========================== -->
-	<div class="menu">
-		<header>
-			<h1>M<span>\</span>Q</h1>
-			<h2>A coder &amp;&amp; designer</h2>
-		</header>
+  
 
-		<div class="code menu-item">
-			<a href="/categories/code">
-				<img src="/img/life.png" alt="">
-				<h1>编码</h1>
-				<h2>Code Note</h2>
-			</a>
-		</div>
 
-		<div class="show menu-item">
-			<a href="/show">
-				<img src="/img/design.png" alt="">
-				<h1>展出</h1>
-				<h2>Show Time</h2>
-			</a>
-		</div>
-		<div class="design menu-item">
-			<a href="/categories/design">
-				<img src="/img/note.png" alt="">
-				<h1>设计</h1>
-				<h2>Some Design</h2>
-			</a>
-		</div>
-	</div>
+
+
+
+
+
+
+
+
+  
+  
     
-    <!-- ============================ END Off-canvas navigation =========================== -->
+  
 
-    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
-    <div class="menu-btn">
-    	<span></span>
-    	<span></span>
-    	<span></span>
-    </div>
-    <div id="sb-site">
-        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
 
-        <!-- ============================ Header & Logo bar =========================== -->
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
 
-        <div id="navigation" class="navbar navbar-fixed-top">
-        	
-            <div class="navbar-inner">
-                <div class="container">
-                    <!-- Info-bar -->
-                    <nav>
-                        <ul class="nav">
-                            <li><a href="/" class="animsition-link">Cyseria | blog</a></li>
-                            <li class="nolink"><span>Always </span>Creative.</li>
-                            
-                            <li><a href="https://github.com/cyseria" title="Github" target="_blank"><i class="icon-github"></i></a></li>
-                            
-                            
-                            <li><a href="http://weibo.com/u/1887935412" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
-                            
-<!--                             <li><a href="/archives" class="animsition-link" title="archive">归档</a></li> -->
-                            <li class="nolink"><span>Welcome!</span></li>
-                        </ul>
-                    </nav>
-                    <!--// Info-bar -->
-                </div>
-                <!-- // .container -->
-                <div class="learnmore"><a href="/about" class="animsition-link" title="about">About&gt;&gt;</a></div>
-                
-            </div>
-            <!-- // .navbar-inner -->
-        </div>
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Cyseria | blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">鳗鱼鱼的博客</p>
+</div>
 
-        <!-- ============================ Header & Logo bar =========================== -->
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
 
-        <!-- ============================ Hero Image =========================== -->
+<nav class="site-nav">
+  
 
-       
-
-        <!-- Height spacing helper -->
+  
+    <ul id="menu" class="menu">
+      
         
-        <!-- // End height spacing helper -->
-
-        <!-- ============================ END Hero Image =========================== -->
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
       
 
-<section id="intro">
-    <div class="container">
-        <div class="row col-md-offset-2">
-            <div class="col-md-8">
-    			<span class="post-meta">
-      <time datetime="2016-05-11T07:17:05.000Z" itemprop="datePublished">
-          2016-05-11
-      </time>
-    
-    
-    | 
-    <a href='/tags/basic/'>basic</a>
-    
-    
-</span>
-                <h1>关于位运算</h1>
-            </div>
-        </div>
+      
+    </ul>
+  
 
-        <div class="col-md-8 col-md-offset-2">
-        	<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本运算"><span class="toc-number">1.</span> <span class="toc-text">基本运算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#乘以2的次方"><span class="toc-number">1.1.</span> <span class="toc-text">乘以2的次方</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#除以2的次方"><span class="toc-number">1.2.</span> <span class="toc-text">除以2的次方</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#乘以2的m次方"><span class="toc-number">1.3.</span> <span class="toc-text">乘以2的m次方</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#除以2的m次方"><span class="toc-number">1.4.</span> <span class="toc-text">除以2的m次方</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#计算2的n次方"><span class="toc-number">1.5.</span> <span class="toc-text">计算2的n次方</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#判断"><span class="toc-number">2.</span> <span class="toc-text">判断</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#判断一个数的奇偶性"><span class="toc-number">2.1.</span> <span class="toc-text">判断一个数的奇偶性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#判断符号是否相同"><span class="toc-number">2.2.</span> <span class="toc-text">判断符号是否相同</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#判断一个数是不是2的幂"><span class="toc-number">2.3.</span> <span class="toc-text">判断一个数是不是2的幂</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#取值"><span class="toc-number">3.</span> <span class="toc-text">取值</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#取绝对值某些机器上效率比n0-n-n-高"><span class="toc-number">3.1.</span> <span class="toc-text">取绝对值（某些机器上，效率比n>0  ?  n:-n 高）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#取两个数的最大值某些机器上效率比ab-ab高"><span class="toc-number">3.2.</span> <span class="toc-text">取两个数的最大值（某些机器上，效率比a>b ? a:b高）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#取两个数的最小值某些机器上效率比ab-ba高"><span class="toc-number">3.3.</span> <span class="toc-text">取两个数的最小值（某些机器上，效率比a>b ? b:a高）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对2的n次方取余"><span class="toc-number">3.4.</span> <span class="toc-text">对2的n次方取余</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#求两个整数的平均值"><span class="toc-number">3.5.</span> <span class="toc-text">求两个整数的平均值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二进制位的操作"><span class="toc-number">4.</span> <span class="toc-text">二进制位的操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#int相关"><span class="toc-number">4.1.</span> <span class="toc-text">int相关</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他"><span class="toc-number">5.</span> <span class="toc-text">其他</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#不用临时变量交换两个数"><span class="toc-number">5.1.</span> <span class="toc-text">不用临时变量交换两个数</span></a></li></ol></li></ol>
-      		<blockquote>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                关于位运算
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-11T15:17:05+08:00" content="2016-05-11">
+              2016-05-11
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/code/" itemprop="url" rel="index">
+                    <span itemprop="name">code</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
 <p>&#x786E;&#x8BA4;&#x5B9E;&#x4E60;offer&#x4E4B;&#x540E;&#xFF0C;&#x6574;&#x4E2A;&#x4EBA;&#x61D2;&#x4E86;&#x5F88;&#x591A;&#xFF0C;&#x52A0;&#x4E0A;&#x5FD9;&#x7740;&#x5B66;&#x6821;&#x5404;&#x79CD;&#x4E71;&#x4E03;&#x516B;&#x7CDF;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x771F;&#x662F;&#x597D;&#x4E45;&#x6CA1;&#x5199;&#x6587;&#x7AE0;&#x4E86;&#x3002;&#x4ECA;&#x5929;&#x5728;&#x5C0F;&#x4F19;&#x4F34;&#x5E26;&#x52A8;&#x4E0B;&#x51C6;&#x5907;&#x5F00;&#x59CB;&#x5237;&#x70B9;leecode&#x9676;&#x51B6;&#x4E0B;&#x60C5;&#x64CD;&#xFF0C;&#x987A;&#x4FBF;&#x6CE8;&#x610F;&#x4E86;&#x4E00;&#x4E0B;&#x5176;&#x4E2D;&#x7684;&#x6548;&#x7387;&#x95EE;&#x9898;&#x987A;&#x624B;&#x8BB0;&#x5F55;</p>
 </blockquote>
 <p>&#x6700;&#x5F00;&#x59CB;&#x7684;&#x539F;&#x9898;&#x662F;&#x4E00;&#x9053;&#x667A;&#x529B;&#x9898;&#xFF08;leecode&#x9898;&#x53F7;292&#xFF0C;Nim Game&#xFF09;&#xFF0C;&#x6211;&#x505A;&#x51FA;&#x7684;&#x7ED3;&#x679C;&#x662F;<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> canWinNim = <span class="function"><span class="keyword">function</span><span class="params">(n)</span> </span>{</span><br><span class="line">    <span class="keyword">return</span> n % <span class="number">4</span> !== <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
 <p>&#x901A;&#x8FC7;&#xFF0C;&#x8FD0;&#x7B97;104ms&#xFF0C;&#x65E0;&#x804A;&#x4E4B;&#x4E0B;&#x770B;&#x4E86;&#x4E0B;&#x6392;&#x884C;&#xFF0C;c&#x7684;&#x6548;&#x7387;&#x679C;&#x7136;&#x4E0D;&#x662F;&#x4E00;&#x822C;&#x7684;&#x9AD8;&#xFF0C;&#x95EE;&#x5C0F;&#x4F19;&#x4F34;js&#x6709;&#x6CA1;&#x6709;&#x66F4;&#x9AD8;&#x6548;&#x5199;&#x6CD5;&#xFF0C;&#x83B7;&#x5F97;&#x4F4D;&#x8FD0;&#x7B97;&#x306E;&#x5FC5;&#x6740;&#x6280;&#xFF0C;&#x603B;&#x7ED3;&#x4E00;&#x4E0B;&#x5E38;&#x89C1;&#x6280;&#x5DE7;&#x5148;&#x3002;</p>
+<a id="more"></a>
 <p>&#x4EE5;&#x4E0B;&#x662F;&#x6B63;&#x9898;&#xFF1A;</p>
 <h2 id="&#x57FA;&#x672C;&#x8FD0;&#x7B97;">&#x57FA;&#x672C;&#x8FD0;&#x7B97;</h2><h3 id="&#x4E58;&#x4EE5;2&#x7684;&#x6B21;&#x65B9;">&#x4E58;&#x4EE5;2&#x7684;&#x6B21;&#x65B9;</h3><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="keyword">n</span> &lt;&lt; <span class="keyword">m</span>;  <span class="comment">//&#x8BA1;&#x7B97;n*(2^m)</span></span><br><span class="line"><span class="comment">// eg.</span></span><br><span class="line"><span class="keyword">return</span> <span class="keyword">n</span> &lt;&lt; 1;  <span class="comment">// n*2</span></span><br></pre></td></tr></table></figure>
 <h3 id="&#x9664;&#x4EE5;2&#x7684;&#x6B21;&#x65B9;">&#x9664;&#x4EE5;2&#x7684;&#x6B21;&#x65B9;</h3><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="keyword">n</span> &gt;&gt; <span class="keyword">m</span>;  <span class="comment">//&#x8BA1;&#x7B97;n/(2^m)</span></span><br><span class="line"><span class="comment">// eg.</span></span><br><span class="line"><span class="keyword">return</span> <span class="keyword">n</span> &gt;&gt; 1;  <span class="comment">// n/2</span></span><br></pre></td></tr></table></figure>
@@ -213,113 +351,305 @@ var _hmt = _hmt || [];
 <p>&#x6700;&#x540E;&#xFF0C;&#x4F4D;&#x8FD0;&#x7B97;&#x57FA;&#x672C;&#x5E38;&#x7528;&#x7684;&#x4E5F;&#x603B;&#x7ED3;&#x5F97;&#x5DEE;&#x4E0D;&#x591A;&#x3002;&#x867D;&#x7136;&#x901A;&#x5E38;&#x5728;&#x5B9E;&#x9645;&#x7A0B;&#x5E8F;&#x4E2D;&#x7528;&#x5F97;&#x4E0D;&#x662F;&#x5F88;&#x591A;&#xFF0C;&#x800C;&#x4E14;&#x5982;&#x679C;&#x5927;&#x9762;&#x79EF;&#x4F7F;&#x7528;&#x5BF9;&#x540E;&#x671F;&#x7684;&#x53EF;&#x7EF4;&#x62A4;&#x6027;&#x662F;&#x5927;&#x5927;&#x7684;&#x964D;&#x4F4E;&#x3002;&#x4E0D;&#x8FC7;&#x5462;&#xFF0C;&#x5B66;&#x597D;&#x4F4D;&#x8FD0;&#x7B97;&#xFF0C;&#x7406;&#x89E3;&#x4E00;&#x5B9A;&#x7684;&#x8BA1;&#x7B97;&#x673A;&#x57FA;&#x7840;&#x77E5;&#x8BC6;&#x5BF9;&#x4E8E;&#x7F16;&#x7A0B;&#x800C;&#x8A00;&#x8FD8;&#x662F;&#x5F88;&#x91CD;&#x8981;&#x7684;&#x5450;&#xFF08;&#x4F8B;&#x5982;0.1+0.2 != 0.3&#x4E4B;&#x7C7B;&#x7684;&#x95EE;&#x9898;&#x4E0D;&#x7528;&#x95EE;&#x641C;&#x7D22;&#x5F15;&#x64CE;&#x5C31;&#x77E5;&#x9053;&#x4E3A;&#x4EC0;&#x4E48;&#x4E86;&#xFF09;&#xFF0C;&#x8FD8;&#x6709;&#xFF0C;&#x7528;&#x4F4D;&#x8FD0;&#x7B97;&#x8FD8;&#x53EF;&#x4EE5;&#x5F88;&#x597D;&#x7684;&#x88C5;&#x903C;&#xFF08;&#x55EF;..&#x4E0D;&#x8FC7;&#x611F;&#x89C9;&#x5927;&#x591A;&#x59B9;&#x5B50;&#x6CA1;&#x5174;&#x8DA3;&#xFF0C;&#x644A;&#x624B;~ &#xFF1E;&#x25BD;&#xFF1C;&#xFF09;</p>
 <p>&#x6700;&#x540E;&#x7684;&#x6700;&#x540E;&#xFF0C;&#x56DE;&#x5230;&#x6700;&#x5F00;&#x59CB;&#x8BF4;&#x7684;&#x5224;&#x65AD;&#xFF0C;&#x5C0F;&#x4F19;&#x4F34;&#x6D4B;&#x8BD5;&#x5F97;&#x51FA;&#x7684;<code>return n%4 !== 0</code>&#x662F;102ms&#xFF0C;&#xFF0C;<code>return !!(n&amp;3)</code>&#x662F;97ms&#xFF0C;<code>return (n&amp;3)&gt;0;</code>&#x662F;92ms&#x770B;&#x5230;&#x6709;80&#x7684;&#x63D0;&#x4EA4;&#xFF0C;&#x7136;&#x540E;&#x8868;&#x793A;&#x6682;&#x65F6;&#x8FD8;&#x6CA1;&#x60F3;&#x51FA;&#x5176;&#x4ED6;&#x66F4;&#x5FEB;&#x7684;&#x65B9;&#x6CD5;&#x4E86;(/ &#x25A1; )&#xFF0C;&#x5982;&#x6709;&#x770B;&#x5230;&#x6B22;&#x8FCE;&#x4EA4;&#x6D41;~</p>
 
-            <div class="clearfix"></div>
-            <hr class="nogutter">
-        </div>
-        <nav class="pagination" role="pagination">
-    
-    
-    <a class="pull-right" href="/2016/04/05/typeof-and-instanceof/">
-        关于typeof和instanceOf →
-    </a>
-    
-</nav>
-
-        <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2016/05/11/bit-operation/" data-title="关于位运算" data-url="http://cyseria.xyz/2016/05/11/bit-operation/"></div>
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"cyseria"};
-(function() {
-	var ds = document.createElement('script');
-	ds.type = 'text/javascript';ds.async = true;
-	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-	ds.charset = 'UTF-8';
-	(document.getElementsByTagName('head')[0] 
-	 || document.getElementsByTagName('body')[0]).appendChild(ds);
-})();
-</script>
-</div>
+      
     </div>
-</section>
 
+    <div>
+      
+        
 
       
-<!-- ============================ Footer =========================== -->
+    </div>
 
-<footer>
-    <div class="container">
-            <div class="copy">
-                <p>
-                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Cyseria. All Rights Reserved.
-                </p>
-            </div>
-            <div class="footer-link">
-                <p>友情链接</p>
-                
-                    <ul>
-                        
-                        <li><a href="http://collect.w3ctrain.com/">w3ctrain</a></li>
-                        
-                        <li><a href="http://www.helkyle.com/">Helkyle</a></li>
-                        
-                        <li><a href="http://www.jhdxr.com/">虾米</a></li>
-                        
-                        <li><a href="http://lastavenger.github.io/">谷月轩</a></li>
-                        
-                    </ul>
-                
-            </div> 
-           
-            <div class="social">
-                <ul>
-                    
-                    <li><a href="https://github.com/cyseria" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
-                    
-                    
-                    
-                    <li><a href="http://weibo.com/u/1887935412" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
-                    
-                </ul>
-            </div>
-            <div class="clearfix"> </div>
-        </div>
-</footer>
-
-<!-- ============================ END Footer =========================== -->
-      <!-- Load our scripts -->
+    <div>
+      
         
-<!-- Resizable 'on-demand' full-height hero -->
-<script type="text/javascript">
-    
-    var resizeHero = function () {
-        var hero = $(".cover,.heightblock"),
-            window1 = $(window);
-        hero.css({
-            "height": window1.height()
-        });
-    };
-    
-    resizeHero();
-    
-    $(window).resize(function () {
-        resizeHero();
-    });
-</script>
-<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
-<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
-<script src="/js/scripts.js"></script><!-- Theme scripts -->
 
-<!-- Initiate flexslider plugin -->
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/basic/" rel="tag">#basic</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/05/typeof-and-instanceof/" rel="next" title="关于typeof和instanceOf">
+                <i class="fa fa-chevron-left"></i> 关于typeof和instanceOf
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Cyseria" />
+          <p class="site-author-name" itemprop="name">Cyseria</p>
+          <p class="site-description motion-element" itemprop="description">这里是自己折腾的各种东西，包括前端技术文章，个人设计作品，欢迎吐槽</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/cyseria" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/1887935412/home?wvr=5" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本运算"><span class="nav-number">1.</span> <span class="nav-text">基本运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#乘以2的次方"><span class="nav-number">1.1.</span> <span class="nav-text">乘以2的次方</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#除以2的次方"><span class="nav-number">1.2.</span> <span class="nav-text">除以2的次方</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#乘以2的m次方"><span class="nav-number">1.3.</span> <span class="nav-text">乘以2的m次方</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#除以2的m次方"><span class="nav-number">1.4.</span> <span class="nav-text">除以2的m次方</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算2的n次方"><span class="nav-number">1.5.</span> <span class="nav-text">计算2的n次方</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断"><span class="nav-number">2.</span> <span class="nav-text">判断</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#判断一个数的奇偶性"><span class="nav-number">2.1.</span> <span class="nav-text">判断一个数的奇偶性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#判断符号是否相同"><span class="nav-number">2.2.</span> <span class="nav-text">判断符号是否相同</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#判断一个数是不是2的幂"><span class="nav-number">2.3.</span> <span class="nav-text">判断一个数是不是2的幂</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#取值"><span class="nav-number">3.</span> <span class="nav-text">取值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#取绝对值某些机器上效率比n0-n-n-高"><span class="nav-number">3.1.</span> <span class="nav-text">取绝对值（某些机器上，效率比n>0  ?  n:-n 高）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#取两个数的最大值某些机器上效率比ab-ab高"><span class="nav-number">3.2.</span> <span class="nav-text">取两个数的最大值（某些机器上，效率比a>b ? a:b高）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#取两个数的最小值某些机器上效率比ab-ba高"><span class="nav-number">3.3.</span> <span class="nav-text">取两个数的最小值（某些机器上，效率比a>b ? b:a高）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对2的n次方取余"><span class="nav-number">3.4.</span> <span class="nav-text">对2的n次方取余</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#求两个整数的平均值"><span class="nav-number">3.5.</span> <span class="nav-text">求两个整数的平均值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二进制位的操作"><span class="nav-number">4.</span> <span class="nav-text">二进制位的操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#int相关"><span class="nav-number">4.1.</span> <span class="nav-text">int相关</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">5.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#不用临时变量交换两个数"><span class="nav-number">5.1.</span> <span class="nav-text">不用临时变量交换两个数</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Cyseria</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
 <script type="text/javascript">
-    $(document).ready(function($) {
-      $('.flexslider').flexslider({
-        animation: "fade",
-        prevText: "",
-        nextText: "",
-        directionNav: true
-      });
-    });
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
 
 </body>
 </html>
