@@ -84,18 +84,36 @@
 
 
 
-<meta name="description" content="&amp;#x65E2;&amp;#x7136;&amp;#x4E4B;&amp;#x524D;&amp;#x6316;&amp;#x4E86;&amp;#x5751;&amp;#x7ED9;&amp;#x81EA;&amp;#x5DF1;&amp;#x5199;&amp;#x4E86;&amp;#x4E2A;&amp;#x4E00;&amp;#xFF0C;&amp;#x90A3;&amp;#x73B0;&amp;#x5728;&amp;#x4E5F;&amp;#x53EA;&amp;#x597D;&amp;#x88C5;&amp;#x4E2A;&amp;#x903C;&amp;#x6765;">
+<meta name="description" content="既然之前挖了坑给自己写了个一，那现在也只好装个逼来个而，关于原理前一篇文基本都有分析，这里只是针对如何使用sass从而优雅的让元素进行居中。
+
+首先，最理想的想法，就无论块级还是内联元素还是什么奇怪的东西，我一句话让他居中他就得乖乖居中。然而对于新手大多数情况是这样：
+
+1. 事前分析关于居中集中具体做法和情况上一篇文章已有分析，这里再次做一下总结：
+
+内联元素：让其块级父元素使用text-cen">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于居中(二)">
 <meta property="og:url" content="http://cyseria.xyz/2015/12/18/about-center2/index.html">
 <meta property="og:site_name" content="Cyseria | blog">
-<meta property="og:description" content="&amp;#x65E2;&amp;#x7136;&amp;#x4E4B;&amp;#x524D;&amp;#x6316;&amp;#x4E86;&amp;#x5751;&amp;#x7ED9;&amp;#x81EA;&amp;#x5DF1;&amp;#x5199;&amp;#x4E86;&amp;#x4E2A;&amp;#x4E00;&amp;#xFF0C;&amp;#x90A3;&amp;#x73B0;&amp;#x5728;&amp;#x4E5F;&amp;#x53EA;&amp;#x597D;&amp;#x88C5;&amp;#x4E2A;&amp;#x903C;&amp;#x6765;">
+<meta property="og:description" content="既然之前挖了坑给自己写了个一，那现在也只好装个逼来个而，关于原理前一篇文基本都有分析，这里只是针对如何使用sass从而优雅的让元素进行居中。
+
+首先，最理想的想法，就无论块级还是内联元素还是什么奇怪的东西，我一句话让他居中他就得乖乖居中。然而对于新手大多数情况是这样：
+
+1. 事前分析关于居中集中具体做法和情况上一篇文章已有分析，这里再次做一下总结：
+
+内联元素：让其块级父元素使用text-cen">
 <meta property="og:image" content="http://7xpbhk.com1.z0.glb.clouddn.com/1450453391989.png">
 <meta property="og:image" content="http://7xpbhk.com1.z0.glb.clouddn.com/1450454000407.png">
-<meta property="og:updated_time" content="2016-02-22T11:48:24.357Z">
+<meta property="og:updated_time" content="2016-08-30T06:46:31.520Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于居中(二)">
-<meta name="twitter:description" content="&amp;#x65E2;&amp;#x7136;&amp;#x4E4B;&amp;#x524D;&amp;#x6316;&amp;#x4E86;&amp;#x5751;&amp;#x7ED9;&amp;#x81EA;&amp;#x5DF1;&amp;#x5199;&amp;#x4E86;&amp;#x4E2A;&amp;#x4E00;&amp;#xFF0C;&amp;#x90A3;&amp;#x73B0;&amp;#x5728;&amp;#x4E5F;&amp;#x53EA;&amp;#x597D;&amp;#x88C5;&amp;#x4E2A;&amp;#x903C;&amp;#x6765;">
+<meta name="twitter:description" content="既然之前挖了坑给自己写了个一，那现在也只好装个逼来个而，关于原理前一篇文基本都有分析，这里只是针对如何使用sass从而优雅的让元素进行居中。
+
+首先，最理想的想法，就无论块级还是内联元素还是什么奇怪的东西，我一句话让他居中他就得乖乖居中。然而对于新手大多数情况是这样：
+
+1. 事前分析关于居中集中具体做法和情况上一篇文章已有分析，这里再次做一下总结：
+
+内联元素：让其块级父元素使用text-cen">
 
 
 
@@ -308,6 +326,7 @@
 <li>&#x5757;&#x7EA7;&#x5143;&#x7D20;&#xFF1A;&#x77E5;&#x9053;&#x9AD8;&#x5EA6;&#x4F7F;&#x7528;&#x8D1F;<code>margin</code>&#xFF0C;&#x4E0D;&#x77E5;&#x9053;&#x9AD8;&#x5EA6;&#x6216;&#x5BBD;&#x5EA6;&#x4F7F;&#x7528;<code>transform</code>&#x3002;</li>
 </ul>
 <p>&#xFF08;&#x5173;&#x4E8E;&#x5757;&#x7EA7;&#x5143;&#x7D20;&#x548C;&#x5185;&#x8054;&#x5143;&#x7D20;&#xFF0C;&#x53EF;<a href="http://cyseria.xyz/2015/12/18/%E5%9D%97%E7%BA%A7%E5%92%8C%E5%86%85%E8%81%94%E5%85%83%E7%B4%A0/">&#x53C2;&#x8003;</a>&#xFF09;</p>
+<a id="more"></a>
 <h2 id="2-&#x597D;&#x4E86;&#x5E9F;&#x8BDD;&#x4E0D;&#x591A;&#x8BF4;&#x5F00;&#x59CB;&#x5C01;&#x5370;">2. &#x597D;&#x4E86;&#x5E9F;&#x8BDD;&#x4E0D;&#x591A;&#x8BF4;&#xFF0C;&#x5F00;&#x59CB;&#x5C01;&#x5370;&#x3002;</h2><p> &#x901A;&#x5E38;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x60F3;&#x8981;&#x5C45;&#x4E2D;&#xFF0C;&#x90FD;&#x662F;&#x9488;&#x5BF9;&#x4E8E;&#x7236;&#x5143;&#x7D20;&#x7684;&#x5C45;&#x4E2D;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x5C06;&#x7236;&#x5143;&#x7D20;&#x5B9A;&#x4E3A;<code>.parent</code>&#x3002;</p>
 <ul>
 <li><p>&#x5148;&#x6765;&#x6B63;&#x5E38;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5757;&#x7EA7;&#x5143;&#x7D20;&#xFF1A;</p>

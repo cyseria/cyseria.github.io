@@ -84,16 +84,25 @@
 
 
 
-<meta name="description" content="&amp;#x5143;&amp;#x7D20;&amp;#x5C45;&amp;#x4E2D;&amp;#x662F;css&amp;#x4E2D;&amp;#x4EBA;&amp;#x4EEC;&amp;#x7ECF;&amp;#x5E38;&amp;#x62B1;&amp;#x6028;&amp;#x7684;&amp;#x4E00;&amp;#x4E2A;&amp;#x95EE;&amp;#x9898;&amp;#xFF0C;&amp;#x4E3A;&amp;#x4EC0;&amp;#x4E48;&amp;#x5B83;&amp;#x5982;&amp;#x6B64;&amp;#x56">
+<meta name="description" content="元素居中是css中人们经常抱怨的一个问题，为什么它如此困难？个人认为原因不是他难，而是不同情况有不同的实现方法，我们很难知道具体用哪种。所以，让我们做一个选择树希望能让他变简单一点。
+
+我需要居中….
+1.水平居中1.1 它是内联元素(inline block,例如文本或链接)你可以直接让它在块级父元素内居中，例如123.center-children &amp;#123;	text-aligin: ce">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于居中(一)">
 <meta property="og:url" content="http://cyseria.xyz/2015/12/07/about-center1/index.html">
 <meta property="og:site_name" content="Cyseria | blog">
-<meta property="og:description" content="&amp;#x5143;&amp;#x7D20;&amp;#x5C45;&amp;#x4E2D;&amp;#x662F;css&amp;#x4E2D;&amp;#x4EBA;&amp;#x4EEC;&amp;#x7ECF;&amp;#x5E38;&amp;#x62B1;&amp;#x6028;&amp;#x7684;&amp;#x4E00;&amp;#x4E2A;&amp;#x95EE;&amp;#x9898;&amp;#xFF0C;&amp;#x4E3A;&amp;#x4EC0;&amp;#x4E48;&amp;#x5B83;&amp;#x5982;&amp;#x6B64;&amp;#x56">
-<meta property="og:updated_time" content="2016-02-22T11:49:32.162Z">
+<meta property="og:description" content="元素居中是css中人们经常抱怨的一个问题，为什么它如此困难？个人认为原因不是他难，而是不同情况有不同的实现方法，我们很难知道具体用哪种。所以，让我们做一个选择树希望能让他变简单一点。
+
+我需要居中….
+1.水平居中1.1 它是内联元素(inline block,例如文本或链接)你可以直接让它在块级父元素内居中，例如123.center-children &amp;#123;	text-aligin: ce">
+<meta property="og:updated_time" content="2016-08-30T06:45:57.941Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于居中(一)">
-<meta name="twitter:description" content="&amp;#x5143;&amp;#x7D20;&amp;#x5C45;&amp;#x4E2D;&amp;#x662F;css&amp;#x4E2D;&amp;#x4EBA;&amp;#x4EEC;&amp;#x7ECF;&amp;#x5E38;&amp;#x62B1;&amp;#x6028;&amp;#x7684;&amp;#x4E00;&amp;#x4E2A;&amp;#x95EE;&amp;#x9898;&amp;#xFF0C;&amp;#x4E3A;&amp;#x4EC0;&amp;#x4E48;&amp;#x5B83;&amp;#x5982;&amp;#x6B64;&amp;#x56">
+<meta name="twitter:description" content="元素居中是css中人们经常抱怨的一个问题，为什么它如此困难？个人认为原因不是他难，而是不同情况有不同的实现方法，我们很难知道具体用哪种。所以，让我们做一个选择树希望能让他变简单一点。
+
+我需要居中….
+1.水平居中1.1 它是内联元素(inline block,例如文本或链接)你可以直接让它在块级父元素内居中，例如123.center-children &amp;#123;	text-aligin: ce">
 
 
 
@@ -312,6 +321,7 @@
 <iframe id="cp_embed_haCGt" src="//codepen.io/chriscoyier/embed/haCGt?height=352&amp;theme-id=1&amp;slug-hash=haCGt&amp;default-tab=result&amp;user=chriscoyier" scrolling="no" frameborder="0" height="352" allowtransparency="true" allowfullscreen="true" name="CodePen Embed" title="CodePen Embed" class="cp_embed_iframe undefined" style="width: 100%; overflow: hidden;"></iframe>
 
 <hr>
+<a id="more"></a>
 <h2 id="2&#x5782;&#x76F4;&#x5C45;&#x4E2D;">2.&#x5782;&#x76F4;&#x5C45;&#x4E2D;</h2><p>&#x5782;&#x76F4;&#x5C45;&#x4E2D;&#x5728;css&#x4E2D;&#x6709;&#x4E00;&#x70B9;&#x70B9;&#x96BE;&#x529E;&#x3002;</p>
 <h3 id="21-&#x5B83;&#x662F;&#x5185;&#x8054;&#x5143;&#x7D20;inline&#x6216;&#x8005;inline-">2.1 &#x5B83;&#x662F;&#x5185;&#x8054;&#x5143;&#x7D20;&#xFF08;inline&#x6216;&#x8005;inline-*&#xFF09;</h3><h4 id="211-&#x53EA;&#x6709;&#x4E00;&#x884C;">2.1.1 &#x53EA;&#x6709;&#x4E00;&#x884C;</h4><p>&#x4E00;&#x4E9B; &#x5185;&#x8054;/&#x6587;&#x672C;(inline/text)  &#x5143;&#x7D20;&#x80FD;&#x5782;&#x76F4;&#x5C45;&#x4E2D;&#x4EC5;&#x4EC5;&#x662F;&#x56E0;&#x4E3A;&#x4ED6;&#x4EEC;&#x6709;&#x76F8;&#x540C;&#x7684;&#x4E0A;&#x4E0B;&#x5185;&#x8FB9;&#x8DDD;(padding)</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.link</span> <span class="rules">{</span><br><span class="line">  <span class="rule"><span class="attribute">padding-top</span>:<span class="value"> <span class="number">30px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">padding-bottom</span>:<span class="value"> <span class="number">30px</span></span></span>;</span><br><span class="line">}</span></span><br></pre></td></tr></table></figure>
