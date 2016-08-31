@@ -2,6 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://cyseria.xyz/about/index.html</loc>
+    <lastmod>2016-08-31T13:54:59.738Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://cyseria.xyz/tags/index.html</loc>
+    <lastmod>2016-08-31T12:46:24.587Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://cyseria.xyz/404.html</loc>
+    <lastmod>2016-08-30T14:09:03.400Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://cyseria.xyz/2016/02/23/10-Top-Tips-for-Creating-Cute-Kawaii-Art/</loc>
     <lastmod>2016-08-30T06:53:35.168Z</lastmod>
   </url>
@@ -64,21 +79,6 @@
   <url>
     <loc>http://cyseria.xyz/2016/05/11/bit-operation/</loc>
     <lastmod>2016-08-29T17:19:50.511Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://cyseria.xyz/show/index.html</loc>
-    <lastmod>2016-02-24T13:48:34.488Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://cyseria.xyz/404.html</loc>
-    <lastmod>2016-02-24T05:07:17.028Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://cyseria.xyz/about/index.html</loc>
-    <lastmod>2015-11-17T09:09:42.118Z</lastmod>
   </url>
   
 </urlset>
