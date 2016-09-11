@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://cyseria.xyz/2016/09/10/Note-you-don-t-know-js/</loc>
+    <lastmod>2016-09-11T06:18:49.110Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://cyseria.xyz/2016/03/05/my-way/</loc>
     <lastmod>2016-09-10T03:09:04.985Z</lastmod>
   </url>
@@ -69,11 +74,6 @@
   <url>
     <loc>http://cyseria.xyz/2016/04/05/typeof-and-instanceof/</loc>
     <lastmod>2016-09-10T03:03:32.763Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://cyseria.xyz/2016/09/10/Note-you-don-t-know-js/</loc>
-    <lastmod>2016-09-10T03:02:31.092Z</lastmod>
   </url>
   
   <url>
