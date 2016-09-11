@@ -84,25 +84,25 @@
 
 
 
-<meta name="description" content="昨天看到前端早读课的情封大大票圈发团购《你不知道的JavaScript》中卷的活动，毫不犹豫的买了一本。刚好在准备校招的面试，于是把上卷翻出怀念一下（segmentfault送的第一本书），顺便复习整理一下。 
+<meta name="description" content="昨天看到前端早读课的情封大大票圈发团购《你不知道的JavaScript》中卷的活动，毫不犹豫的买了一本。刚好在准备校招的面试，于是把上卷翻出怀念一下（segmentfault送的第一本书），顺便复习整理一下。 此文不定时更新直到看完。
 
 this
-当一个函数被调用时，会创建一个活动记录（有时候也成为执行上下文）。这个记录会包含函数在哪里被调用（调用栈），函数的调用方式，传入的参数等信息。this就是这个记录的一个属性，会">
+当一个函数被调用时，会创建一个活动记录（有时候也成为执行上下文）。这个记录会包含函数在哪里被调用（调用栈），函数的调用方式，传入的参数等信息。this就">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《你不知道的JavaScript上卷》读书笔记">
 <meta property="og:url" content="http://cyseria.xyz/2016/09/10/Note-you-don-t-know-js/index.html">
 <meta property="og:site_name" content="鳗鱼鱼 | blog">
-<meta property="og:description" content="昨天看到前端早读课的情封大大票圈发团购《你不知道的JavaScript》中卷的活动，毫不犹豫的买了一本。刚好在准备校招的面试，于是把上卷翻出怀念一下（segmentfault送的第一本书），顺便复习整理一下。 
+<meta property="og:description" content="昨天看到前端早读课的情封大大票圈发团购《你不知道的JavaScript》中卷的活动，毫不犹豫的买了一本。刚好在准备校招的面试，于是把上卷翻出怀念一下（segmentfault送的第一本书），顺便复习整理一下。 此文不定时更新直到看完。
 
 this
-当一个函数被调用时，会创建一个活动记录（有时候也成为执行上下文）。这个记录会包含函数在哪里被调用（调用栈），函数的调用方式，传入的参数等信息。this就是这个记录的一个属性，会">
-<meta property="og:updated_time" content="2016-09-11T06:18:49.110Z">
+当一个函数被调用时，会创建一个活动记录（有时候也成为执行上下文）。这个记录会包含函数在哪里被调用（调用栈），函数的调用方式，传入的参数等信息。this就">
+<meta property="og:updated_time" content="2016-09-11T06:22:30.437Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《你不知道的JavaScript上卷》读书笔记">
-<meta name="twitter:description" content="昨天看到前端早读课的情封大大票圈发团购《你不知道的JavaScript》中卷的活动，毫不犹豫的买了一本。刚好在准备校招的面试，于是把上卷翻出怀念一下（segmentfault送的第一本书），顺便复习整理一下。 
+<meta name="twitter:description" content="昨天看到前端早读课的情封大大票圈发团购《你不知道的JavaScript》中卷的活动，毫不犹豫的买了一本。刚好在准备校招的面试，于是把上卷翻出怀念一下（segmentfault送的第一本书），顺便复习整理一下。 此文不定时更新直到看完。
 
 this
-当一个函数被调用时，会创建一个活动记录（有时候也成为执行上下文）。这个记录会包含函数在哪里被调用（调用栈），函数的调用方式，传入的参数等信息。this就是这个记录的一个属性，会">
+当一个函数被调用时，会创建一个活动记录（有时候也成为执行上下文）。这个记录会包含函数在哪里被调用（调用栈），函数的调用方式，传入的参数等信息。this就">
 
 
 
@@ -303,7 +303,7 @@ this
 
       
         <blockquote>
-<p>&#x6628;&#x5929;&#x770B;&#x5230;&#x524D;&#x7AEF;&#x65E9;&#x8BFB;&#x8BFE;&#x7684;&#x60C5;&#x5C01;&#x5927;&#x5927;&#x7968;&#x5708;&#x53D1;&#x56E2;&#x8D2D;&#x300A;&#x4F60;&#x4E0D;&#x77E5;&#x9053;&#x7684;JavaScript&#x300B;&#x4E2D;&#x5377;&#x7684;&#x6D3B;&#x52A8;&#xFF0C;&#x6BEB;&#x4E0D;&#x72B9;&#x8C6B;&#x7684;&#x4E70;&#x4E86;&#x4E00;&#x672C;&#x3002;&#x521A;&#x597D;&#x5728;&#x51C6;&#x5907;&#x6821;&#x62DB;&#x7684;&#x9762;&#x8BD5;&#xFF0C;&#x4E8E;&#x662F;&#x628A;&#x4E0A;&#x5377;&#x7FFB;&#x51FA;&#x6000;&#x5FF5;&#x4E00;&#x4E0B;&#xFF08;segmentfault&#x9001;&#x7684;&#x7B2C;&#x4E00;&#x672C;&#x4E66;&#xFF09;&#xFF0C;&#x987A;&#x4FBF;&#x590D;&#x4E60;&#x6574;&#x7406;&#x4E00;&#x4E0B;&#x3002; </p>
+<p>&#x6628;&#x5929;&#x770B;&#x5230;&#x524D;&#x7AEF;&#x65E9;&#x8BFB;&#x8BFE;&#x7684;&#x60C5;&#x5C01;&#x5927;&#x5927;&#x7968;&#x5708;&#x53D1;&#x56E2;&#x8D2D;&#x300A;&#x4F60;&#x4E0D;&#x77E5;&#x9053;&#x7684;JavaScript&#x300B;&#x4E2D;&#x5377;&#x7684;&#x6D3B;&#x52A8;&#xFF0C;&#x6BEB;&#x4E0D;&#x72B9;&#x8C6B;&#x7684;&#x4E70;&#x4E86;&#x4E00;&#x672C;&#x3002;&#x521A;&#x597D;&#x5728;&#x51C6;&#x5907;&#x6821;&#x62DB;&#x7684;&#x9762;&#x8BD5;&#xFF0C;&#x4E8E;&#x662F;&#x628A;&#x4E0A;&#x5377;&#x7FFB;&#x51FA;&#x6000;&#x5FF5;&#x4E00;&#x4E0B;&#xFF08;segmentfault&#x9001;&#x7684;&#x7B2C;&#x4E00;&#x672C;&#x4E66;&#xFF09;&#xFF0C;&#x987A;&#x4FBF;&#x590D;&#x4E60;&#x6574;&#x7406;&#x4E00;&#x4E0B;&#x3002; &#x6B64;&#x6587;&#x4E0D;&#x5B9A;&#x65F6;&#x66F4;&#x65B0;&#x76F4;&#x5230;&#x770B;&#x5B8C;&#x3002;</p>
 </blockquote>
 <h2 id="this">this</h2><blockquote>
 <p>&#x5F53;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x88AB;&#x8C03;&#x7528;&#x65F6;&#xFF0C;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6D3B;&#x52A8;&#x8BB0;&#x5F55;&#xFF08;&#x6709;&#x65F6;&#x5019;&#x4E5F;&#x6210;&#x4E3A;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#xFF09;&#x3002;&#x8FD9;&#x4E2A;&#x8BB0;&#x5F55;&#x4F1A;&#x5305;&#x542B;&#x51FD;&#x6570;&#x5728;&#x54EA;&#x91CC;&#x88AB;&#x8C03;&#x7528;&#xFF08;&#x8C03;&#x7528;&#x6808;&#xFF09;&#xFF0C;&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;&#x65B9;&#x5F0F;&#xFF0C;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x7B49;&#x4FE1;&#x606F;&#x3002;this&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x8BB0;&#x5F55;&#x7684;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x4F1A;&#x5728;&#x51FD;&#x6570;&#x6267;&#x884C;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x7528;&#x5230;&#x3002;</p>
