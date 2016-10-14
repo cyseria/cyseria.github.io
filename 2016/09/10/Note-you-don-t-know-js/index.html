@@ -84,25 +84,31 @@
 
 
 
-<meta name="description" content="昨天看到前端早读课的情封大大票圈发团购《你不知道的JavaScript》中卷的活动，毫不犹豫的买了一本。刚好在准备校招的面试，于是把上卷翻出怀念一下（segmentfault送的第一本书），顺便复习整理一下。 此文不定时更新直到看完。
+<meta name="description" content="[toc]
+
+昨天看到前端早读课的情封大大票圈发团购《你不知道的JavaScript》中卷的活动，毫不犹豫的买了一本。刚好在准备校招的面试，于是把上卷翻出怀念一下（segmentfault送的第一本书），顺便复习整理一下。 
 
 this
-当一个函数被调用时，会创建一个活动记录（有时候也成为执行上下文）。这个记录会包含函数在哪里被调用（调用栈），函数的调用方式，传入的参数等信息。this就">
+当一个函数被调用时，会创建一个活动记录（有时候也成为执行上下文）。这个记录会包含函数在哪里被调用（调用栈），函数的调用方式，传入的参数等信息。this就是这个记录">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《你不知道的JavaScript上卷》读书笔记">
 <meta property="og:url" content="http://cyseria.xyz/2016/09/10/Note-you-don-t-know-js/index.html">
 <meta property="og:site_name" content="鳗鱼鱼 | blog">
-<meta property="og:description" content="昨天看到前端早读课的情封大大票圈发团购《你不知道的JavaScript》中卷的活动，毫不犹豫的买了一本。刚好在准备校招的面试，于是把上卷翻出怀念一下（segmentfault送的第一本书），顺便复习整理一下。 此文不定时更新直到看完。
+<meta property="og:description" content="[toc]
+
+昨天看到前端早读课的情封大大票圈发团购《你不知道的JavaScript》中卷的活动，毫不犹豫的买了一本。刚好在准备校招的面试，于是把上卷翻出怀念一下（segmentfault送的第一本书），顺便复习整理一下。 
 
 this
-当一个函数被调用时，会创建一个活动记录（有时候也成为执行上下文）。这个记录会包含函数在哪里被调用（调用栈），函数的调用方式，传入的参数等信息。this就">
-<meta property="og:updated_time" content="2016-10-12T12:52:29.458Z">
+当一个函数被调用时，会创建一个活动记录（有时候也成为执行上下文）。这个记录会包含函数在哪里被调用（调用栈），函数的调用方式，传入的参数等信息。this就是这个记录">
+<meta property="og:updated_time" content="2016-10-14T02:52:18.975Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《你不知道的JavaScript上卷》读书笔记">
-<meta name="twitter:description" content="昨天看到前端早读课的情封大大票圈发团购《你不知道的JavaScript》中卷的活动，毫不犹豫的买了一本。刚好在准备校招的面试，于是把上卷翻出怀念一下（segmentfault送的第一本书），顺便复习整理一下。 此文不定时更新直到看完。
+<meta name="twitter:description" content="[toc]
+
+昨天看到前端早读课的情封大大票圈发团购《你不知道的JavaScript》中卷的活动，毫不犹豫的买了一本。刚好在准备校招的面试，于是把上卷翻出怀念一下（segmentfault送的第一本书），顺便复习整理一下。 
 
 this
-当一个函数被调用时，会创建一个活动记录（有时候也成为执行上下文）。这个记录会包含函数在哪里被调用（调用栈），函数的调用方式，传入的参数等信息。this就">
+当一个函数被调用时，会创建一个活动记录（有时候也成为执行上下文）。这个记录会包含函数在哪里被调用（调用栈），函数的调用方式，传入的参数等信息。this就是这个记录">
 
 
 
@@ -321,8 +327,9 @@ this
       
 
       
-        <blockquote>
-<p>&#x6628;&#x5929;&#x770B;&#x5230;&#x524D;&#x7AEF;&#x65E9;&#x8BFB;&#x8BFE;&#x7684;&#x60C5;&#x5C01;&#x5927;&#x5927;&#x7968;&#x5708;&#x53D1;&#x56E2;&#x8D2D;&#x300A;&#x4F60;&#x4E0D;&#x77E5;&#x9053;&#x7684;JavaScript&#x300B;&#x4E2D;&#x5377;&#x7684;&#x6D3B;&#x52A8;&#xFF0C;&#x6BEB;&#x4E0D;&#x72B9;&#x8C6B;&#x7684;&#x4E70;&#x4E86;&#x4E00;&#x672C;&#x3002;&#x521A;&#x597D;&#x5728;&#x51C6;&#x5907;&#x6821;&#x62DB;&#x7684;&#x9762;&#x8BD5;&#xFF0C;&#x4E8E;&#x662F;&#x628A;&#x4E0A;&#x5377;&#x7FFB;&#x51FA;&#x6000;&#x5FF5;&#x4E00;&#x4E0B;&#xFF08;segmentfault&#x9001;&#x7684;&#x7B2C;&#x4E00;&#x672C;&#x4E66;&#xFF09;&#xFF0C;&#x987A;&#x4FBF;&#x590D;&#x4E60;&#x6574;&#x7406;&#x4E00;&#x4E0B;&#x3002; &#x6B64;&#x6587;&#x4E0D;&#x5B9A;&#x65F6;&#x66F4;&#x65B0;&#x76F4;&#x5230;&#x770B;&#x5B8C;&#x3002;</p>
+        <p>[toc]</p>
+<blockquote>
+<p>&#x6628;&#x5929;&#x770B;&#x5230;&#x524D;&#x7AEF;&#x65E9;&#x8BFB;&#x8BFE;&#x7684;&#x60C5;&#x5C01;&#x5927;&#x5927;&#x7968;&#x5708;&#x53D1;&#x56E2;&#x8D2D;&#x300A;&#x4F60;&#x4E0D;&#x77E5;&#x9053;&#x7684;JavaScript&#x300B;&#x4E2D;&#x5377;&#x7684;&#x6D3B;&#x52A8;&#xFF0C;&#x6BEB;&#x4E0D;&#x72B9;&#x8C6B;&#x7684;&#x4E70;&#x4E86;&#x4E00;&#x672C;&#x3002;&#x521A;&#x597D;&#x5728;&#x51C6;&#x5907;&#x6821;&#x62DB;&#x7684;&#x9762;&#x8BD5;&#xFF0C;&#x4E8E;&#x662F;&#x628A;&#x4E0A;&#x5377;&#x7FFB;&#x51FA;&#x6000;&#x5FF5;&#x4E00;&#x4E0B;&#xFF08;segmentfault&#x9001;&#x7684;&#x7B2C;&#x4E00;&#x672C;&#x4E66;&#xFF09;&#xFF0C;&#x987A;&#x4FBF;&#x590D;&#x4E60;&#x6574;&#x7406;&#x4E00;&#x4E0B;&#x3002; </p>
 </blockquote>
 <h2 id="this">this</h2><blockquote>
 <p>&#x5F53;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x88AB;&#x8C03;&#x7528;&#x65F6;&#xFF0C;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6D3B;&#x52A8;&#x8BB0;&#x5F55;&#xFF08;&#x6709;&#x65F6;&#x5019;&#x4E5F;&#x6210;&#x4E3A;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#xFF09;&#x3002;&#x8FD9;&#x4E2A;&#x8BB0;&#x5F55;&#x4F1A;&#x5305;&#x542B;&#x51FD;&#x6570;&#x5728;&#x54EA;&#x91CC;&#x88AB;&#x8C03;&#x7528;&#xFF08;&#x8C03;&#x7528;&#x6808;&#xFF09;&#xFF0C;&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;&#x65B9;&#x5F0F;&#xFF0C;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x7B49;&#x4FE1;&#x606F;&#x3002;this&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x8BB0;&#x5F55;&#x7684;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x4F1A;&#x5728;&#x51FD;&#x6570;&#x6267;&#x884C;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x7528;&#x5230;&#x3002;</p>
@@ -368,6 +375,13 @@ this
 <li>&#x4F7F;&#x7528;ES6&#x7684;<code>for...of</code>&#x8BED;&#x6CD5;&#x6765;&#x904D;&#x5386;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF08;&#x6570;&#x7EC4;&#xFF0C;&#x5BF9;&#x8C61;&#x7B49;&#x7B49;&#xFF09;&#x4E2D;&#x7684;&#x503C;&#xFF0C;<code>for...of</code>&#x4F1A;&#x5BFB;&#x627E;&#x5185;&#x7F6E;&#x6216;&#x8005;&#x81EA;&#x5B9A;&#x4E49;&#x7684;<code>@@iterator</code>&#x5BF9;&#x8C61;&#x5E76;&#x8C03;&#x7528;&#x5B83;&#x7684;<code>next()</code>&#x65B9;&#x6CD5;&#x6765;&#x904D;&#x5386;&#x6570;&#x636E;&#x503C;&#x3002;</li>
 </ul>
 </li>
+</ul>
+<h2 id="&#x539F;&#x578B;">&#x539F;&#x578B;</h2><p>&#x7EE7;&#x627F;&#xFF1A;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params">name</span>) </span>{</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">}</span><br><span class="line">Foo.prototype.myName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Bar</span>(<span class="params">name, label</span>) </span>{</span><br><span class="line">    Foo.call(<span class="keyword">this</span>, name);</span><br><span class="line">    <span class="keyword">this</span>.label = label;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684; Bar.prototype &#x5BF9;&#x8C61;&#x5E76;&#x5173;&#x8054;&#x5230; Foo.prototype</span></span><br><span class="line">Bar.prototype = <span class="built_in">Object</span>.create(Foo.prototype);</span><br><span class="line"></span><br><span class="line"><span class="comment">// &#x6CE8;&#x610F;&#xFF1A;&#x73B0;&#x5728;&#x6CA1;&#x6709;Bar.prototype.constructor&#x4E86;</span></span><br><span class="line"><span class="comment">// &#x5982;&#x679C;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x624B;&#x52A8;&#x4FEE;&#x590D;&#x4E00;&#x4E0B;</span></span><br><span class="line"></span><br><span class="line">Bar.prototype.myLabel = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.label;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> Bar(<span class="string">&quot;a&quot;</span>, <span class="string">&quot;obj a&quot;</span>);</span><br><span class="line"></span><br><span class="line">a.myName(); <span class="comment">// &quot;a&quot;</span></span><br><span class="line">a.myLabel(); <span class="comment">// &quot;obj a&quot;</span></span><br></pre></td></tr></table></figure></p>
+<p>&#x8C03;&#x7528; <code>Object.create(..)</code>&#x4F1A;&#x51ED;&#x7A7A;&#x521B;&#x9020;&#x4E00;&#x4E2A;&#x201C;&#x65B0;&#x201D;&#x5BF9;&#x8C61;&#x5E76;&#x628A;&#x65B0;&#x5BF9;&#x8C61;&#x5185;&#x90E8;&#x7684;[[prototype]]&#x5173;&#x8054;&#x5230;&#x4F60;&#x6307;&#x5B9A;&#x7684;&#x5BF9;&#x8C61;&#xFF08;&#x672C;&#x4F8B;&#x4E2D;&#x662F; Foo.prototype&#xFF09;<br>&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x8FD9;&#x6761;&#x8BED;&#x53E5;&#x7684;&#x610F;&#x601D;&#x5C31;&#x662F;&#x201C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684; Bar.prototype &#x5BF9;&#x8C61;&#x5E76;&#x628A;&#x5B83;&#x5173;&#x8054;&#x5230; Foo.prototype&#x201D;&#x3002;</p>
+<p>&#x628A; Bar.prototype &#x5173;&#x8054;&#x5230; Foo.prototype &#x7684;&#x65B9;&#x6CD5;&#xFF1A;<br><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// ES6 &#x4E4B;&#x524D;&#x9700;&#x8981;&#x629B;&#x5F03;&#x9ED8;&#x8BA4;&#x7684; Bar.<span class="keyword">prototype</span></span><br><span class="line">Bar.<span class="keyword">prototype</span> = Object.create(Foo.<span class="keyword">prototype</span>);</span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span>ES6 &#x5F00;&#x59CB;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x73B0;&#x6709;&#x7684; Bar.<span class="keyword">prototype</span></span><br><span class="line">Object.setPrototypeOf(Bar.<span class="keyword">prototype</span>, Foo.<span class="keyword">prototype</span>);</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>&#x5982;&#x679C;&#x8981;&#x8BBF;&#x95EE;&#x5BF9;&#x8C61;&#x4E2D;&#x5E76;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;[[Get]]&#x64CD;&#x4F5C;&#x5C31;&#x4F1A;&#x67E5;&#x627E;&#x5BF9;&#x8C61;&#x5185;&#x90E8;[[prototype]]&#x5173;&#x8054;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x8FD9;&#x4E2A;&#x5173;&#x8054;&#x5BF9;&#x8C61;&#x5B9E;&#x9645;&#x4E0A;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x6761;&#x201C;&#x539F;&#x578B;&#x94FE;&#x201D;&#xFF0C;&#x5728;&#x67E5;&#x627E;&#x5C5E;&#x6027;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x5BF9;&#x5B83;&#x8FDB;&#x884C;&#x904D;&#x5386;</li>
+<li>&#x6240;&#x6709;&#x666E;&#x901A;&#x5BF9;&#x8C61;&#x90FD;&#x6709;&#x5185;&#x7F6E;&#x7684; <code>Object.prototype</code>&#xFF0C;&#x6307;&#x5411;&#x539F;&#x578B;&#x94FE;&#x7684;&#x9876;&#x7AEF;&#xFF08;&#x6BD4;&#x5982;&#x5168;&#x5C40;&#x4F5C;&#x7528;&#x57DF;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x539F;&#x578B;&#x94FE;&#x4E2D;&#x627E;&#x4E0D;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x5C5E;&#x6027;&#x5C31;&#x4F1A;&#x505C;&#x6B62;&#x3002;<code>toString</code>&#xFF0C;<code>valueOf</code>&#x548C;&#x5176;&#x4ED6;&#x4E00;&#x4E9B;&#x901A;&#x7528;&#x529F;&#x80FD;&#x90FD;&#x5B58;&#x5728;&#x4E8E;Object.prototype&#x5BF9;&#x8C61;&#x4E0A;&#xFF0C;&#x56E0;&#x6B64;&#x8BED;&#x8A00;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x5BF9;&#x8C61;&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4ED6;&#x4EEC;&#x3002;</li>
 </ul>
 
       
@@ -572,7 +586,7 @@ this
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#this"><span class="nav-number">1.</span> <span class="nav-text">this</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#如何判断"><span class="nav-number">1.1.</span> <span class="nav-text">如何判断</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象"><span class="nav-number">2.</span> <span class="nav-text">对象</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#this"><span class="nav-number">1.</span> <span class="nav-text">this</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#如何判断"><span class="nav-number">1.1.</span> <span class="nav-text">如何判断</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象"><span class="nav-number">2.</span> <span class="nav-text">对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原型"><span class="nav-number">3.</span> <span class="nav-text">原型</span></a></li></ol></div>
             
           </div>
         </section>
